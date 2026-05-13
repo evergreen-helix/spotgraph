@@ -29,7 +29,8 @@ function buildEdgeCollection(
   const features: FeatureCollection<LineString>["features"] = [];
 
   for (const c of results) {
-    const cPos = graph.venues[c.id]?.loc;
+    // Prefer the rank response's loc; fall back to graph for backward compat.
+    const cPos = c.venue?.loc ?? graph.venues[c.id]?.loc;
     if (!cPos) continue;
     const anchors = new Set(c.breakdown.slice(0, 2).map((b) => b.anchor));
     for (const aId of anchors) {
@@ -83,6 +84,13 @@ export default function MapView({
   const mapRef = useRef<MapRef | null>(null);
 
   const matchIds = useMemo(() => new Set(results.map((r) => r.id)), [results]);
+  // Ranked candidates that aren't in the trimmed graph response — still need
+  // pins on the map so the user can see what was matched.
+  const extraResultPins = useMemo(
+    () =>
+      results.filter((r) => !graph.venues[r.id] && !graph.anchors[r.id] && r.venue?.loc),
+    [results, graph]
+  );
   const edges = useMemo(() => {
     if (results.length === 0) {
       return { type: "FeatureCollection" as const, features: [] };
@@ -109,7 +117,10 @@ export default function MapView({
     if (results.length === 0 || !mapRef.current) return;
     const pts: [number, number][] = [];
     for (const a of Object.values(graph.anchors)) pts.push(a.loc);
-    for (const r of results) pts.push(graph.venues[r.id].loc);
+    for (const r of results) {
+      const loc = r.venue?.loc ?? graph.venues[r.id]?.loc;
+      if (loc) pts.push(loc);
+    }
     if (pts.length < 2) return;
     const lngs = pts.map((p) => p[0]);
     const lats = pts.map((p) => p[1]);
@@ -191,6 +202,26 @@ export default function MapView({
             >
               <div className={cls}>
                 <span className="label">{v.name}</span>
+              </div>
+            </Marker>
+          );
+        })}
+
+        {extraResultPins.map((r) => {
+          const isFocused = focusedId === r.id;
+          return (
+            <Marker
+              key={r.id}
+              longitude={r.venue.loc[0]}
+              latitude={r.venue.loc[1]}
+              anchor="center"
+              onClick={(e) => {
+                e.originalEvent.stopPropagation();
+                onPinClick(r.id);
+              }}
+            >
+              <div className={`pin candidate match ${isFocused ? "focused" : ""}`}>
+                <span className="label">{r.venue.name}</span>
               </div>
             </Marker>
           );
