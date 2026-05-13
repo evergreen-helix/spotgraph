@@ -1,6 +1,7 @@
 import type { VenueId } from "../types";
 import { useGraph } from "../contexts/GraphContext";
 import { pretty } from "../lib/rank";
+import ShareButton from "./ShareButton";
 
 interface Props {
   onFocus: (id: VenueId) => void;
@@ -46,6 +47,7 @@ export default function ProfileCard({ onFocus }: Props) {
         From {totalSearches}× searches · {totalDir}× direction requests ·{" "}
         {totalSaves}× saves
       </div>
+      <ShareButton />
     </div>
   );
 }

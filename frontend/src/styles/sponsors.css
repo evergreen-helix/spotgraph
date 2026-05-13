@@ -1,0 +1,87 @@
+/* ───────── SPONSOR BADGE ───────── */
+.sponsors {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.sponsors-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.35;
+}
+
+.sponsors-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.sponsor {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 100px;
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+  font-weight: 600;
+}
+
+.sponsor.gold {
+  background: var(--bone);
+  border: 1px solid var(--love);
+  color: var(--ink);
+}
+
+.sponsor.gold:hover {
+  background: var(--love);
+  color: var(--bone);
+  transform: scale(1.05);
+}
+
+.sponsor.silver {
+  background: var(--bone);
+  border: 1px solid rgba(15, 20, 25, 0.2);
+  color: var(--ink);
+  opacity: 0.75;
+}
+
+.sponsor.silver:hover {
+  opacity: 1;
+  border-color: var(--ink);
+  transform: scale(1.05);
+}
+
+/* ───────── SHARE BUTTON ───────── */
+.share-btn {
+  margin-top: 10px;
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px dashed var(--thread-soft);
+  border-radius: 100px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--thread);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  width: 100%;
+}
+
+.share-btn:hover {
+  background: var(--thread);
+  color: var(--bone);
+  border-color: var(--thread);
+}

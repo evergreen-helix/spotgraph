@@ -5,6 +5,5 @@ pydantic>=2.9.0
 pydantic-settings>=2.6.0
 python-dotenv>=1.0.1
 httpx>=0.27.0
-# ingest pipeline deps (used by ingest/takeout_parser.py)
-spacy>=3.8.0
-anthropic>=0.39.0
+openai>=1.50.0
+numpy>=2.0.0

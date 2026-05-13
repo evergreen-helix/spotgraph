@@ -1,0 +1,52 @@
+name: venue-enrichment
+version: "1.0.0"
+description: >
+  Given a venue name and scraped review text, extract structured tags
+  (dishes, cuisine, vibe) using Claude. This skill is the core of the
+  ingest pipeline — its output populates the Neo4j taste graph.
+
+model: claude-sonnet-4-6
+temperature: 0.2
+max_tokens: 512
+
+system_prompt: |
+  You are a food and venue classifier. Given a venue name and review excerpts,
+  extract structured tags. Be specific and concise.
+
+user_prompt_template: |
+  Venue: {{venue_name}}
+  Location: {{area}}
+  Reviews:
+  {{reviews}}
+
+  Extract the following as JSON:
+  {
+    "dishes": ["up to 4 signature dishes, use snake_case"],
+    "cuisine": ["up to 3 cuisine tags, use snake_case"],
+    "vibe": ["up to 4 vibe/atmosphere tags, use snake_case"]
+  }
+
+  Rules:
+  - Only include dishes actually mentioned in reviews
+  - Cuisine tags should be specific (e.g. "northern_thai" not just "asian")
+  - Vibe tags describe the experience (e.g. "late_night", "counter_service")
+
+output_schema:
+  type: object
+  properties:
+    dishes:
+      type: array
+      items: { type: string, pattern: "^[a-z][a-z0-9_]*$" }
+      maxItems: 4
+    cuisine:
+      type: array
+      items: { type: string, pattern: "^[a-z][a-z0-9_]*$" }
+      maxItems: 3
+    vibe:
+      type: array
+      items: { type: string, pattern: "^[a-z][a-z0-9_]*$" }
+      maxItems: 4
+  required: [dishes, cuisine, vibe]
+
+consumers:
+  - backend/ingest/takeout_parser.py::enrich_with_claude

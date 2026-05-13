@@ -1,0 +1,33 @@
+name: query-boost
+version: "2.0.0"
+description: >
+  Maps a free-text search query to anchor boost weights using fuzzy
+  substring matching. Runs identically in Python (backend/routes/rank.py)
+  and TypeScript (frontend/src/lib/rank.ts). Tessl ensures both
+  implementations stay in sync via shared eval assertions.
+
+type: deterministic
+language: [python, typescript]
+
+algorithm: |
+  1. Tokenise query into words, drop tokens with len <= 2
+  2. For each anchor, build a searchable list:
+     [name, ...dishes, ...cuisine, ...vibe, area] (underscores → spaces)
+  3. If any token is a substring of any searchable term, boost that anchor to 3.0
+  4. Unmatched anchors remain at default boost 1.0
+
+parameters:
+  boost_value: 3.0
+  min_token_length: 3
+
+consumers:
+  - backend/routes/rank.py::_compute_boosts
+  - frontend/src/lib/rank.ts::computeBoosts
+
+changelog:
+  - version: "2.0.0"
+    date: "2026-05-13"
+    change: "Replaced hardcoded regex patterns with fuzzy substring matching"
+  - version: "1.0.0"
+    date: "2026-05-13"
+    change: "Initial regex-based anchor boost patterns"

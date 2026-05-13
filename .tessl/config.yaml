@@ -1,0 +1,19 @@
+project: semantica
+version: "0.1.0"
+description: >
+  Tessl skill definitions for Semantica — a personalized venue search engine.
+  Skills define the agent behaviours used in the ingest and ranking pipelines,
+  ensuring consistent results whether the logic runs in the Python backend,
+  the JS client fallback, or a standalone CLI.
+
+skills_dir: ./skills
+
+evaluation:
+  dataset: ../backend/cypher/seed.cql
+  golden_queries:
+    - query: "bagels near me"
+      expect_top: brick_lane_bagel
+    - query: "late night cheap eats"
+      expect_boosted: [beigel, lahore_kebab, e_pellicci]
+    - query: "weekend brunch"
+      expect_boosted: [towpath, caravan_exmouth]

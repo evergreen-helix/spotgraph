@@ -28,7 +28,7 @@ export interface User {
 
 export interface BreakdownItem {
   anchor: VenueId;
-  kind: "SAME_DISH" | "SAME_CUISINE" | "SAME_VIBE" | "SAME_AREA";
+  kind: "SAME_DISH" | "SAME_CUISINE" | "SAME_VIBE" | "SAME_AREA" | "SIMILAR_OVERALL";
   item: string;
   score: number;
 }

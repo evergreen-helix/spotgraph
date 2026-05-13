@@ -10,3 +10,4 @@ CREATE CONSTRAINT area_name    IF NOT EXISTS FOR (a:Area)    REQUIRE a.name IS U
 
 CREATE INDEX venue_loc         IF NOT EXISTS FOR (v:Venue) ON (v.loc);
 CREATE INDEX anchored_to_count IF NOT EXISTS FOR ()-[r:ANCHORED_TO]-() ON (r.search_count);
+CREATE INDEX similar_to_score  IF NOT EXISTS FOR ()-[r:SIMILAR_TO]-() ON (r.score);

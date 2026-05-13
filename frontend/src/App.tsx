@@ -6,6 +6,7 @@ import Suggestions from "./components/Suggestions";
 import ProfileCard from "./components/ProfileCard";
 import HintCard from "./components/HintCard";
 import MiniSearch from "./components/MiniSearch";
+import SponsorBadge from "./components/SponsorBadge";
 import { GraphProvider } from "./contexts/GraphContext";
 import { useSearch } from "./hooks/useSearch";
 
@@ -175,6 +176,7 @@ export default function App() {
 
       <ProfileCard onFocus={(id) => setFocusedId(id)} />
       <HintCard />
+      <SponsorBadge />
     </GraphProvider>
   );
 }

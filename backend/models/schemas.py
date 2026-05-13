@@ -13,7 +13,7 @@ from pydantic import BaseModel, Field
 
 
 Coord = tuple[float, float]  # [lng, lat] — keep this order, GeoJSON convention
-EdgeKind = Literal["SAME_DISH", "SAME_CUISINE", "SAME_VIBE", "SAME_AREA"]
+EdgeKind = Literal["SAME_DISH", "SAME_CUISINE", "SAME_VIBE", "SAME_AREA", "SIMILAR_OVERALL"]
 
 
 class Venue(BaseModel):
