@@ -113,11 +113,12 @@ def _snap(items: Iterable, allowed: list[str]) -> list[str]:
 def _boosts_from_similarity(
     q_vec: Vec, anchor_vecs: dict[str, Vec]
 ) -> dict[str, float]:
-    """Map cosine similarity → continuous boost in [1.0, 3.5].
+    """Map cosine similarity → boost in [1.0, 4.0], rank-based.
 
-    A perfectly orthogonal anchor gets 1.0 (i.e. no boost, falls back to the
-    default in Cypher). A perfectly aligned anchor gets 3.5 — replicates the
-    old binary 3.0 boost ceiling with a smooth gradient underneath.
+    Plain cosine of text-embedding-3-small across food venues clusters in a
+    narrow band (~0.4-0.7), so a linear map produces near-identical boosts
+    for every anchor. We rank-order them instead so the best-matched anchor
+    always gets the full 4.0 boost and the worst gets 1.0.
     """
     if not anchor_vecs:
         return {}
@@ -126,8 +127,10 @@ def _boosts_from_similarity(
 
     mat = np.stack([anchor_vecs[i] for i in ids])
     sims = cosine_matrix(q_vec, mat)
-    sims = np.clip(sims, 0.0, 1.0)
-    boosts = 1.0 + 2.5 * sims
+    # argsort-of-argsort gives the rank (0 = lowest sim, n-1 = highest)
+    ranks = sims.argsort().argsort().astype(np.float32)
+    n = max(len(sims) - 1, 1)
+    boosts = 1.0 + 3.0 * (ranks / n)
     return {aid: float(b) for aid, b in zip(ids, boosts)}
 
 

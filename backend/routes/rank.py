@@ -53,10 +53,15 @@ CALL (u) {
          ELSE 0.0
        END * b *
        CASE
-         WHEN et = 'SERVES'      AND prop.name IN $tag_dishes   THEN 1.5
-         WHEN et = 'HAS_CUISINE' AND prop.name IN $tag_cuisines THEN 1.5
-         WHEN et = 'HAS_VIBE'    AND prop.name IN $tag_vibes    THEN 1.5
-         WHEN et = 'IN_AREA'     AND prop.name IN $tag_areas    THEN 1.5
+         WHEN et = 'SERVES'      AND prop.name IN $tag_dishes   THEN 2.5
+         WHEN et = 'HAS_CUISINE' AND prop.name IN $tag_cuisines THEN 2.5
+         WHEN et = 'HAS_VIBE'    AND prop.name IN $tag_vibes    THEN 2.0
+         WHEN et = 'IN_AREA'     AND prop.name IN $tag_areas    THEN 2.0
+         // When the LLM extracted tags for a dimension but this prop isn't
+         // in them, attenuate hard. The user said "curry"; don't reward
+         // SAME_DISH:salt_beef_bagel just because the edge happens to exist.
+         WHEN et = 'SERVES'      AND size($tag_dishes)   > 0 THEN 0.15
+         WHEN et = 'HAS_CUISINE' AND size($tag_cuisines) > 0 THEN 0.15
          ELSE 1.0
        END AS edge_score
   RETURN candidate,
@@ -148,7 +153,7 @@ async def post_rank(req: RankRequest) -> list[RankedCandidate]:
                 w_cuisine=1.5,
                 w_vibe=1.0,
                 w_area=1.2,
-                w_similar=4.0,
+                w_similar=2.5,
                 w_distance_penalty=0.15,
             ).data()
     except Exception as e:
