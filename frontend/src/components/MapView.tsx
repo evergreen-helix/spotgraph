@@ -10,6 +10,7 @@ import type { FeatureCollection, LineString } from "geojson";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { HOOD_LABELS } from "../data/graph";
 import type { Graph, RankedCandidate, VenueId } from "../types";
+import VenuePopup from "./VenuePopup";
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 
@@ -18,6 +19,7 @@ interface Props {
   results: RankedCandidate[];
   focusedId: VenueId | null;
   onPinClick: (id: VenueId) => void;
+  onPopupClose: () => void;
 }
 
 /**
@@ -35,7 +37,6 @@ function buildEdgeCollection(
   for (const c of results) {
     const cPos = graph.venues[c.id]?.loc;
     if (!cPos) continue;
-    // Take the two strongest anchor-edges
     const anchors = new Set(c.breakdown.slice(0, 2).map((b) => b.anchor));
     for (const aId of anchors) {
       const aPos = graph.anchors[aId]?.loc;
@@ -59,12 +60,10 @@ function bezierArc(
   b: [number, number],
   steps: number
 ): [number, number][] {
-  // perpendicular offset: 25% of chord length, rotated 90°
   const dx = b[0] - a[0];
   const dy = b[1] - a[1];
   const len = Math.hypot(dx, dy);
   const offset = len * 0.25;
-  // unit perp
   const px = -dy / (len || 1);
   const py = dx / (len || 1);
   const mx = (a[0] + b[0]) / 2 + px * offset;
@@ -80,7 +79,13 @@ function bezierArc(
   return pts;
 }
 
-export default function MapView({ graph, results, focusedId, onPinClick }: Props) {
+export default function MapView({
+  graph,
+  results,
+  focusedId,
+  onPinClick,
+  onPopupClose,
+}: Props) {
   const mapRef = useRef<MapRef | null>(null);
 
   const matchIds = useMemo(() => new Set(results.map((r) => r.id)), [results]);
@@ -94,7 +99,7 @@ export default function MapView({ graph, results, focusedId, onPinClick }: Props
     return buildEdgeCollection(graph, filtered);
   }, [graph, results, focusedId]);
 
-  // When a focusedId changes, fly to that pin
+  // When focus changes, fly to that pin
   useEffect(() => {
     if (!focusedId || !graph) return;
     const v = graph.venues[focusedId] ?? graph.anchors[focusedId];
@@ -157,31 +162,35 @@ export default function MapView({ graph, results, focusedId, onPinClick }: Props
         </Source>
 
         {/* Anchor (loved) markers */}
-        {Object.values(graph.anchors).map((a) => (
-          <Marker
-            key={a.id}
-            longitude={a.loc[0]}
-            latitude={a.loc[1]}
-            anchor="center"
-            onClick={(e) => {
-              e.originalEvent.stopPropagation();
-              onPinClick(a.id);
-            }}
-          >
-            <div className={`pin loved ${focusedId === a.id ? "" : ""}`}>
-              <span className="label">♥ {a.name}</span>
-            </div>
-          </Marker>
-        ))}
+        {Object.values(graph.anchors).map((a) => {
+          const isFocused = focusedId === a.id;
+          return (
+            <Marker
+              key={a.id}
+              longitude={a.loc[0]}
+              latitude={a.loc[1]}
+              anchor="center"
+              onClick={(e) => {
+                e.originalEvent.stopPropagation();
+                onPinClick(a.id);
+              }}
+            >
+              <div className={`pin loved ${isFocused ? "focused" : ""}`}>
+                <span className="label">♥ {a.name}</span>
+              </div>
+            </Marker>
+          );
+        })}
 
         {/* Candidate markers */}
         {Object.values(graph.venues).map((v) => {
           const isMatch = matchIds.has(v.id);
           const isDim = matchIds.size > 0 && !isMatch;
           const isFocused = focusedId === v.id;
-          let cls = "pin";
-          if (isMatch || isFocused) cls += " match";
-          else if (isDim) cls += " dim";
+          let cls = "pin candidate";
+          if (isMatch) cls += " match";
+          if (isFocused) cls += " match focused";
+          if (isDim && !isFocused) cls += " dim";
           return (
             <Marker
               key={v.id}
@@ -211,6 +220,14 @@ export default function MapView({ graph, results, focusedId, onPinClick }: Props
             <div className="hood-label">{h.name}</div>
           </Marker>
         ))}
+
+        {/* Click-to-describe popup */}
+        <VenuePopup
+          graph={graph}
+          venueId={focusedId}
+          results={results}
+          onClose={onPopupClose}
+        />
       </Map>
     </div>
   );

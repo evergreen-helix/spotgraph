@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import MapView from "./components/MapView";
 import TopBar from "./components/TopBar";
 import SearchBar from "./components/SearchBar";
 import Suggestions from "./components/Suggestions";
 import ProfileCard from "./components/ProfileCard";
 import HintCard from "./components/HintCard";
+import MiniSearch from "./components/MiniSearch";
 import { useSearch } from "./hooks/useSearch";
 
 const HOTKEYS: Record<string, string> = {
@@ -26,34 +27,47 @@ export default function App() {
     focusedId,
     setFocusedId,
   } = useSearch();
+  const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
-    inputRef.current?.focus();
-  }, [graph]);
+    if (graph && !collapsed) inputRef.current?.focus();
+  }, [graph, collapsed]);
+
+  const expand = useCallback(() => {
+    setCollapsed(false);
+    // focus after the transition starts so it can scroll into view
+    requestAnimationFrame(() => inputRef.current?.focus());
+  }, []);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const isInput =
         (e.target as HTMLElement | null)?.tagName === "INPUT" ||
         (e.target as HTMLElement | null)?.tagName === "TEXTAREA";
-      // Escape always works
+
       if (e.key === "Escape") {
+        if (focusedId) {
+          setFocusedId(null);
+          return;
+        }
         setQuery("");
         close();
         inputRef.current?.blur();
         return;
       }
-      // Hotkeys 1-4 only when not typing into the input
+
       if (isInput) return;
+
       const preset = HOTKEYS[e.key];
       if (preset) {
+        if (collapsed) setCollapsed(false);
         setQuery(preset);
         if (inputRef.current) inputRef.current.value = preset;
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [close, setQuery]);
+  }, [close, setQuery, focusedId, setFocusedId, collapsed]);
 
   if (!graph) {
     return (
@@ -83,17 +97,28 @@ export default function App() {
         results={results}
         focusedId={focusedId}
         onPinClick={(id) => setFocusedId(id)}
+        onPopupClose={() => setFocusedId(null)}
       />
       <div className="grain" />
       <div className="paper-tint" />
 
       <TopBar />
 
-      <div className="stage">
+      <div className={`stage ${collapsed ? "collapsed" : ""}`}>
         <div className="composer">
+          <button
+            className="collapse-btn"
+            onClick={() => setCollapsed(true)}
+            title="Hide search — use the map"
+            aria-label="Collapse search"
+          >
+            ⌃
+          </button>
           <h1 className="tagline">
             Search that <em>knows</em> your spots.
-            <span className="sub">— from places you love, to places you'll love —</span>
+            <span className="sub">
+              — from places you love, to places you'll love —
+            </span>
           </h1>
           <SearchBar
             ref={inputRef}
@@ -116,6 +141,8 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      <MiniSearch show={collapsed} query={query} onExpand={expand} />
 
       <ProfileCard graph={graph} onFocus={(id) => setFocusedId(id)} />
       <HintCard />
