@@ -11,71 +11,67 @@
 //   $w_vibe, $w_area,
 //   $w_similar,           : SIMILAR_TO branch weight
 //   $w_distance_penalty   : edge-type weights
-//
-// Two branches: property-shared edges, and :SIMILAR_TO direct edges
-// (built offline by scripts/build_similar_edges.py).
-//
-// See backend/routes/rank.py for the Python wrapper that invokes this.
 
-MATCH (u:User {id: $user_id})-[:ANCHORED_TO]->(anchor:Venue)
-WITH u, anchor, coalesce($boosts[anchor.id], 1.0) AS b
+MATCH (u:User {id: $user_id})
 
-CALL {
-  WITH u, anchor, b
-  MATCH (anchor)-[r1]->(prop)<-[r2]-(candidate:Venue)
+CALL (u) {
+  // Branch 1: property-shared edges (dish/cuisine/vibe/area)
+  MATCH (u)-[:ANCHORED_TO]->(anchor:Venue)-[r1]->(prop)<-[r2]-(candidate:Venue)
   WHERE candidate <> anchor
     AND NOT EXISTS { MATCH (u)-[:ANCHORED_TO]->(candidate) }
     AND type(r1) IN ['SERVES','HAS_CUISINE','HAS_VIBE','IN_AREA']
     AND type(r1) = type(r2)
-  WITH candidate, anchor, b, type(r1) AS edge_type, prop,
-       CASE type(r1)
+  WITH candidate, anchor, type(r1) AS et, prop,
+       coalesce($boosts[anchor.id], 1.0) AS b
+  WITH candidate, anchor, et, prop,
+       CASE et
          WHEN 'SERVES'       THEN $w_dish
          WHEN 'HAS_CUISINE'  THEN $w_cuisine
          WHEN 'HAS_VIBE'     THEN $w_vibe
          WHEN 'IN_AREA'      THEN $w_area
          ELSE 0.0
-       END AS base_weight,
+       END * b *
        CASE
-         WHEN type(r1) = 'SERVES'      AND prop.name IN $tag_dishes   THEN 1.5
-         WHEN type(r1) = 'HAS_CUISINE' AND prop.name IN $tag_cuisines THEN 1.5
-         WHEN type(r1) = 'HAS_VIBE'    AND prop.name IN $tag_vibes    THEN 1.5
-         WHEN type(r1) = 'IN_AREA'     AND prop.name IN $tag_areas    THEN 1.5
+         WHEN et = 'SERVES'      AND prop.name IN $tag_dishes   THEN 1.5
+         WHEN et = 'HAS_CUISINE' AND prop.name IN $tag_cuisines THEN 1.5
+         WHEN et = 'HAS_VIBE'    AND prop.name IN $tag_vibes    THEN 1.5
+         WHEN et = 'IN_AREA'     AND prop.name IN $tag_areas    THEN 1.5
          ELSE 1.0
-       END AS tag_match
-  WITH candidate, anchor, edge_type, prop, base_weight * b * tag_match AS edge_score
-  RETURN candidate AS c, anchor AS a, edge_type, prop.name AS item, edge_score
+       END AS edge_score
+  RETURN candidate,
+         {
+           anchor: anchor.id,
+           kind:
+             CASE et
+               WHEN 'SERVES'      THEN 'SAME_DISH'
+               WHEN 'HAS_CUISINE' THEN 'SAME_CUISINE'
+               WHEN 'HAS_VIBE'    THEN 'SAME_VIBE'
+               WHEN 'IN_AREA'     THEN 'SAME_AREA'
+             END,
+           item: prop.name,
+           score: edge_score
+         } AS item,
+         edge_score AS partial
+
+  UNION ALL
+
+  // Branch 2: :SIMILAR_TO direct edges
+  MATCH (u)-[:ANCHORED_TO]->(anchor:Venue)-[s:SIMILAR_TO]->(candidate:Venue)
+  WHERE NOT EXISTS { MATCH (u)-[:ANCHORED_TO]->(candidate) }
+  WITH candidate, anchor,
+       coalesce(s.score, 0.0) * $w_similar * coalesce($boosts[anchor.id], 1.0) AS sim_score
+  RETURN candidate,
+         {
+           anchor: anchor.id,
+           kind: 'SIMILAR_OVERALL',
+           item: 'similar to ' + anchor.name,
+           score: sim_score
+         } AS item,
+         sim_score AS partial
 }
 
-WITH u, c AS candidate, a AS anchor, edge_type, item, edge_score
-WITH candidate,
-     sum(edge_score) - candidate.dist * $w_distance_penalty AS prop_score,
-     collect({
-       anchor: anchor.id,
-       kind:
-         CASE edge_type
-           WHEN 'SERVES'      THEN 'SAME_DISH'
-           WHEN 'HAS_CUISINE' THEN 'SAME_CUISINE'
-           WHEN 'HAS_VIBE'    THEN 'SAME_VIBE'
-           WHEN 'IN_AREA'     THEN 'SAME_AREA'
-         END,
-       item: item,
-       score: edge_score
-     }) AS prop_breakdown
-
-OPTIONAL MATCH (u_:User {id: $user_id})-[:ANCHORED_TO]->(anc:Venue)-[s:SIMILAR_TO]->(candidate)
-WITH candidate, prop_score, prop_breakdown,
-     collect(DISTINCT CASE WHEN anc IS NULL THEN NULL ELSE {
-       anchor: anc.id,
-       kind: 'SIMILAR_OVERALL',
-       item: 'similar to ' + anc.name,
-       score: coalesce(s.score, 0.0) * $w_similar * coalesce($boosts[anc.id], 1.0)
-     } END) AS sim_breakdown_raw
-WITH candidate, prop_score, prop_breakdown,
-     [item IN sim_breakdown_raw WHERE item IS NOT NULL] AS sim_breakdown
-
-WITH candidate,
-     prop_score + reduce(s = 0.0, item IN sim_breakdown | s + item.score) AS score,
-     prop_breakdown + sim_breakdown AS breakdown
+WITH candidate, collect(item) AS breakdown, sum(partial) AS raw
+WITH candidate, breakdown, raw - candidate.dist * $w_distance_penalty AS score
 WHERE score > 0
 
 OPTIONAL MATCH (candidate)-[:SERVES]->(d:Dish)

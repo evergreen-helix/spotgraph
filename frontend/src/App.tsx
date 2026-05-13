@@ -61,14 +61,19 @@ export default function App() {
         return;
       }
 
-      if (isInput) return;
-
       const preset = HOTKEYS[e.key];
       if (preset) {
+        // Hotkeys 1–4 override even when the input has focus — they're the
+        // primary demo interaction. preventDefault keeps the digit from being
+        // typed into the input alongside the preset.
+        if (isInput) e.preventDefault();
         if (collapsed) setCollapsed(false);
         setQuery(preset);
         if (inputRef.current) inputRef.current.value = preset;
+        return;
       }
+
+      if (isInput) return;
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);

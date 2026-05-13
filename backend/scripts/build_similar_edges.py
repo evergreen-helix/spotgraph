@@ -105,10 +105,12 @@ def main() -> int:
     ]
     vecs = embed_batch(texts)
 
-    mat = np.stack(vecs)
-    norms = np.linalg.norm(mat, axis=1)
+    mat = np.stack(vecs).astype(np.float32)
+    norms = np.linalg.norm(mat, axis=1, keepdims=True)
     norms[norms == 0.0] = 1.0
-    normed = mat / norms[:, None]
+    normed = mat / norms
+    # NaN/Inf can leak in from degenerate inputs; cosine of a zero vector is 0
+    normed = np.nan_to_num(normed, nan=0.0, posinf=0.0, neginf=0.0)
 
     id_index = {r["id"]: i for i, r in enumerate(rows)}
     anchor_set = set(anchor_ids)
