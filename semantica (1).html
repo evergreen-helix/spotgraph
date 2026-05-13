@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Semantica — Search that knows your spots</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f1419;
+    --bone: #f7f3ec;
+    --paper: #efe9dc;
+    --road: #d9d2c0;
+    --water: #c8d8d8;
+    --park: #d6dec4;
+    --thread: #8b6f3e;
+    --thread-soft: #c7a96a;
+    --hot: #c4452d;
+    --hot-glow: rgba(196, 69, 45, 0.18);
+    --love: #e8a93a;
+    --shadow: 0 30px 60px -20px rgba(15, 20, 25, 0.25), 0 10px 30px -10px rgba(15, 20, 25, 0.15);
+    --shadow-tight: 0 4px 16px -4px rgba(15, 20, 25, 0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    background: var(--bone);
+    color: var(--ink);
+    font-family: 'Inter Tight', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ───────── MAP BACKGROUND ───────── */
+  .map {
+    position: fixed;
+    inset: 0;
+    background: var(--paper);
+    overflow: hidden;
+    z-index: 0;
+  }
+  .map svg { width: 100%; height: 100%; display: block; }
+
+  .grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.08 0 0 0 0 0.1 0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .hood {
+    position: absolute;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--thread);
+    opacity: 0.7;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  /* Map pins */
+  .pin {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 3px solid var(--bone);
+    box-shadow: var(--shadow-tight);
+    transform: translate(-50%, -50%);
+    transition: all 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+    cursor: pointer;
+    z-index: 2;
+  }
+  .pin::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: var(--ink);
+    color: var(--bone);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+  .pin:hover::after,
+  .pin.match::after,
+  .pin.loved::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .pin.loved {
+    background: var(--love);
+    width: 16px;
+    height: 16px;
+    border-color: var(--bone);
+  }
+  .pin.loved::before {
+    content: "♥";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: var(--love);
+  }
+  .pin.match {
+    background: var(--hot);
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 0 0 8px var(--hot-glow), var(--shadow-tight);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 8px var(--hot-glow), var(--shadow-tight); }
+    50% { box-shadow: 0 0 0 16px rgba(196, 69, 45, 0.05), var(--shadow-tight); }
+  }
+  .pin.dim { opacity: 0.2; }
+
+  /* Edges drawn between loved spots and recommendations */
+  .edges {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .edges svg { width: 100%; height: 100%; }
+  .edges path {
+    stroke: var(--hot);
+    stroke-width: 1.2;
+    fill: none;
+    stroke-dasharray: 4 4;
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+  .edges.show path { opacity: 0.55; }
+
+  /* ───────── TOP BAR ───────── */
+  .topbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 10;
+    padding: 22px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+  }
+  .brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    pointer-events: auto;
+  }
+  .brand span { color: var(--hot); }
+  .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.6;
+    pointer-events: auto;
+  }
+  .meta b { color: var(--hot); font-weight: 600; }
+
+  /* ───────── SEARCH CENTERPIECE ───────── */
+  .stage {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .composer {
+    width: min(640px, 92vw);
+    pointer-events: auto;
+    transform: translateY(-40px);
+  }
+
+  .tagline {
+    text-align: center;
+    margin-bottom: 28px;
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 4.4vw, 46px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+  }
+  .tagline em {
+    font-style: italic;
+    color: var(--hot);
+    font-weight: 500;
+  }
+  .tagline .sub {
+    display: block;
+    margin-top: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.55;
+    font-style: normal;
+  }
+
+  .bar {
+    position: relative;
+    background: var(--bone);
+    border: 1.5px solid var(--ink);
+    border-radius: 100px;
+    padding: 4px 6px 4px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow);
+    transition: border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .bar.open {
+    border-radius: 28px 28px 0 0;
+    border-bottom: 1.5px dashed var(--thread);
+  }
+  .bar svg.lens { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.7; }
+  .bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    padding: 18px 0;
+    color: var(--ink);
+  }
+  .bar input::placeholder {
+    color: var(--ink);
+    opacity: 0.4;
+    font-style: italic;
+  }
+  .go {
+    background: var(--ink);
+    color: var(--bone);
+    border: none;
+    border-radius: 100px;
+    padding: 12px 22px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.2s;
+  }
+  .go:hover { transform: scale(1.03); background: var(--hot); }
+
+  /* ───────── DROPDOWN ───────── */
+  .drop {
+    background: var(--bone);
+    border: 1.5px solid var(--ink);
+    border-top: none;
+    border-radius: 0 0 28px 28px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow);
+  }
+  .drop.open { max-height: 580px; }
+  .drop-inner { padding: 22px 26px 26px; }
+
+  .drop-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted rgba(15,20,25,0.2);
+  }
+  .drop-head h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink);
+    opacity: 0.7;
+  }
+  .drop-head .you {
+    font-family: 'Fraunces', serif;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--thread);
+  }
+
+  .sugg {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    padding: 12px 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.15s;
+    border-bottom: 1px dotted rgba(15,20,25,0.08);
+  }
+  .sugg:last-child { border-bottom: none; }
+  .sugg:hover {
+    background: rgba(196, 69, 45, 0.05);
+    transform: translateX(4px);
+  }
+  .sugg-rank {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--hot);
+    font-weight: 600;
+    width: 22px;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+  .sugg-body { flex: 1; min-width: 0; }
+  .sugg-name {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .sugg-name .dist {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--ink);
+    opacity: 0.5;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  .sugg-why {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 12.5px;
+    color: var(--ink);
+    opacity: 0.78;
+    line-height: 1.5;
+  }
+  .sugg-why .edge { color: var(--hot); font-weight: 500; }
+  .sugg-why .anchor { color: var(--thread); font-weight: 600; }
+  .sugg-score {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--ink);
+    align-self: center;
+    text-align: right;
+    padding: 6px 10px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    flex-shrink: 0;
+    background: var(--bone);
+  }
+  .sugg.top .sugg-score {
+    background: var(--ink);
+    color: var(--bone);
+  }
+
+  .breadcrumb {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dotted rgba(15,20,25,0.2);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    opacity: 0.75;
+    line-height: 1.9;
+    overflow-wrap: break-word;
+  }
+  .breadcrumb b { color: var(--hot); font-weight: 600; }
+  .breadcrumb .node {
+    display: inline-block;
+    background: rgba(139, 111, 62, 0.12);
+    border: 1px solid var(--thread-soft);
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin: 1px 2px;
+    color: var(--ink);
+  }
+  .breadcrumb .node.love {
+    background: rgba(232, 169, 58, 0.18);
+    border-color: var(--love);
+  }
+
+  /* ───────── ANCHOR SPOTS PROFILE ───────── */
+  .profile {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    z-index: 10;
+    background: var(--bone);
+    border: 1.5px solid var(--ink);
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: var(--shadow-tight);
+    max-width: 300px;
+  }
+  .profile h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.55;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .profile .name {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .loved-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .loved-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 12px;
+  }
+  .loved-item .heart {
+    color: var(--love);
+    font-size: 11px;
+  }
+  .loved-item .place {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .loved-item .area {
+    color: var(--ink);
+    opacity: 0.55;
+    font-style: italic;
+    font-size: 11px;
+  }
+  .profile .source {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dotted rgba(15,20,25,0.2);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.45;
+    line-height: 1.6;
+  }
+
+  /* ───────── HINT ───────── */
+  .hint {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 10;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.55;
+    text-align: right;
+    line-height: 1.7;
+  }
+  .hint kbd {
+    background: var(--ink);
+    color: var(--bone);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 9px;
+    margin: 0 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ───────── MAP BACKDROP ───────── -->
+<div class="map">
+  <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <!-- River Thames -->
+    <path d="M 0 820 Q 400 780 800 810 T 1600 800 L 1600 1000 L 0 1000 Z" fill="var(--water)" opacity="0.7"/>
+    <!-- Parks -->
+    <ellipse cx="1280" cy="350" rx="160" ry="100" fill="var(--park)" opacity="0.6"/>
+    <circle cx="720" cy="280" r="60" fill="var(--park)" opacity="0.5"/>
+
+    <!-- Major roads -->
+    <g stroke="var(--road)" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.85">
+      <path d="M 0 460 L 1600 440"/>
+      <path d="M 740 0 L 760 1000"/>
+      <path d="M 0 240 Q 600 280 1600 220"/>
+      <path d="M 0 620 L 1600 600"/>
+    </g>
+    <!-- Minor roads -->
+    <g stroke="var(--road)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7">
+      <path d="M 220 0 L 240 1000"/>
+      <path d="M 480 0 L 500 1000"/>
+      <path d="M 1000 0 L 1020 1000"/>
+      <path d="M 1280 0 L 1260 1000"/>
+      <path d="M 0 140 L 1600 130"/>
+      <path d="M 0 360 L 1600 350"/>
+      <path d="M 0 540 L 1600 530"/>
+      <path d="M 0 720 L 1600 710"/>
+    </g>
+    <!-- Alleys -->
+    <g stroke="var(--road)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5">
+      <path d="M 600 200 L 900 700"/>
+      <path d="M 300 300 L 700 400"/>
+      <path d="M 900 500 L 1200 700"/>
+    </g>
+    <!-- Buildings -->
+    <g fill="var(--road)" opacity="0.3">
+      <rect x="260" y="380" width="80" height="50" rx="2"/>
+      <rect x="360" y="380" width="60" height="50" rx="2"/>
+      <rect x="540" y="370" width="100" height="60" rx="2"/>
+      <rect x="660" y="370" width="70" height="60" rx="2"/>
+      <rect x="800" y="380" width="100" height="50" rx="2"/>
+      <rect x="920" y="380" width="60" height="50" rx="2"/>
+      <rect x="540" y="480" width="80" height="40" rx="2"/>
+      <rect x="640" y="480" width="100" height="40" rx="2"/>
+      <rect x="800" y="480" width="90" height="40" rx="2"/>
+      <rect x="1080" y="380" width="120" height="60" rx="2"/>
+      <rect x="260" y="640" width="80" height="50" rx="2"/>
+      <rect x="360" y="640" width="100" height="50" rx="2"/>
+      <rect x="1080" y="640" width="90" height="50" rx="2"/>
+    </g>
+  </svg>
+
+  <!-- Neighborhood labels -->
+  <div class="hood" style="left: 47%; top: 36%;">Shoreditch</div>
+  <div class="hood" style="left: 48%; top: 50%;">Spitalfields</div>
+  <div class="hood" style="left: 60%; top: 58%;">Whitechapel</div>
+  <div class="hood" style="left: 76%; top: 40%;">Bethnal Green</div>
+  <div class="hood" style="left: 23%; top: 56%;">Clerkenwell</div>
+  <div class="hood" style="left: 86%; top: 22%;">Hackney</div>
+</div>
+<div class="grain"></div>
+
+<!-- ───────── EDGE LINES BETWEEN PINS ───────── -->
+<div class="edges" id="edges">
+  <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g id="edge-paths"></g>
+  </svg>
+</div>
+
+<!-- ───────── PINS ───────── -->
+<!-- ANCHOR (loved) spots — learned from search history -->
+<div class="pin loved" data-id="beigel" data-label="♥ Beigel Bake · Brick Lane" style="left: 47%; top: 47%;"></div>
+<div class="pin loved" data-id="dishoom" data-label="♥ Dishoom · Shoreditch" style="left: 44%; top: 37%;"></div>
+<div class="pin loved" data-id="towpath" data-label="♥ Towpath Café · Regent's Canal" style="left: 32%; top: 24%;"></div>
+
+<!-- Candidate venues -->
+<div class="pin" data-id="brick_lane_bagel" data-label="Brick Lane Bagel Co." style="left: 50%; top: 49%;"></div>
+<div class="pin" data-id="poppies" data-label="Poppies Fish & Chips" style="left: 53%; top: 51%;"></div>
+<div class="pin" data-id="ottolenghi" data-label="Ottolenghi · Spitalfields" style="left: 50%; top: 43%;"></div>
+<div class="pin" data-id="black_axe" data-label="Black Axe Mangal · Highbury" style="left: 18%; top: 18%;"></div>
+<div class="pin" data-id="climpsons" data-label="Climpson & Sons · Broadway Mkt" style="left: 80%; top: 30%;"></div>
+<div class="pin" data-id="gunpowder" data-label="Gunpowder · Spitalfields" style="left: 53%; top: 42%;"></div>
+<div class="pin" data-id="kappacasein" data-label="Kappacasein · Borough Mkt" style="left: 38%; top: 80%;"></div>
+<div class="pin" data-id="monocle" data-label="Monocle Café · Marylebone" style="left: 12%; top: 36%;"></div>
+<div class="pin" data-id="lyles" data-label="Lyle's · Shoreditch" style="left: 42%; top: 38%;"></div>
+<div class="pin" data-id="pophams" data-label="Pophams Bakery · Hackney" style="left: 84%; top: 24%;"></div>
+
+<!-- ───────── TOP BAR ───────── -->
+<header class="topbar">
+  <div class="brand">semantica<span>.</span></div>
+  <div class="meta">graph · <b>14,832 nodes</b> · <b>61,407 edges</b></div>
+</header>
+
+<!-- ───────── CENTERPIECE ───────── -->
+<div class="stage">
+  <div class="composer">
+    <h1 class="tagline">
+      Search that <em>knows</em> your spots.
+      <span class="sub">— from places you love, to places you'll love —</span>
+    </h1>
+
+    <div class="bar" id="bar">
+      <svg class="lens" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/>
+        <path d="m20 20-3.5-3.5"/>
+      </svg>
+      <input id="q" type="text" placeholder="Try: where should I eat?" autocomplete="off" />
+      <button class="go" id="go">Search</button>
+    </div>
+
+    <div class="drop" id="drop">
+      <div class="drop-inner">
+        <div class="drop-head">
+          <h3>Suggestions · projected from your anchors</h3>
+          <span class="you">your taste graph →</span>
+        </div>
+        <div id="suggestions"></div>
+        <div class="breadcrumb" id="trace"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── ANCHORS PROFILE ───────── -->
+<div class="profile">
+  <h4>Your anchor venues<br>— inferred from search history</h4>
+  <div class="name">Alex Chen</div>
+  <div class="loved-list">
+    <div class="loved-item"><span class="heart">♥</span><span class="place">Beigel Bake</span><span class="area">— Brick Lane</span></div>
+    <div class="loved-item"><span class="heart">♥</span><span class="place">Dishoom</span><span class="area">— Shoreditch</span></div>
+    <div class="loved-item"><span class="heart">♥</span><span class="place">Towpath Café</span><span class="area">— Regent's Canal</span></div>
+  </div>
+  <div class="source">From 14× searches · 9× direction requests · 6× saves</div>
+</div>
+
+<!-- ───────── HINT ───────── -->
+<div class="hint">
+  <kbd>1</kbd> bagels &middot; <kbd>2</kbd> brunch &middot; <kbd>3</kbd> curry<br>
+  <kbd>4</kbd> where to eat &middot; <kbd>esc</kbd> reset
+</div>
+
+<script>
+/* ───────────────────────────────────────────────
+   MOCK NEO4J GRAPH
+
+   In production:
+     - Ingest Google Search history (Takeout)
+     - Identify venue mentions + repeat searches
+     - Tag each venue: dishes, cuisine, vibe, area
+     - Store as Neo4j graph
+     - At search time, run ONE Cypher query that
+       walks from User -> AnchorVenue -> shared
+       property -> CandidateVenue
+
+   For the demo, we embed the subgraph + a JS port
+   of the ranking Cypher.
+   ─────────────────────────────────────────────── */
+
+const GRAPH = {
+  user: { id: "u_alex", name: "Alex Chen" },
+
+  // anchor venues — places Alex has searched for repeatedly
+  anchors: {
+    beigel:   { name: "Beigel Bake",   area: "brick_lane",     dishes: ["salt_beef_bagel","cream_cheese_bagel"], cuisine: ["jewish","east_european"], vibe: ["no_frills","late_night","counter_service","cheap_eats"] },
+    dishoom:  { name: "Dishoom",       area: "shoreditch",     dishes: ["bacon_naan","black_daal"],              cuisine: ["indian","bombay"],         vibe: ["bustling","all_day","atmospheric"] },
+    towpath:  { name: "Towpath Café",  area: "regents_canal",  dishes: ["sourdough_toast","cardamom_bun"],       cuisine: ["modern_european","cafe"],  vibe: ["outdoor","seasonal","local_favourite","weekend_brunch"] }
+  },
+
+  // candidate universe
+  venues: {
+    brick_lane_bagel: { name: "Brick Lane Bagel Co.", area: "brick_lane",   dishes: ["salt_beef_bagel","cream_cheese_bagel"], cuisine: ["jewish","east_european"], vibe: ["no_frills","late_night","counter_service","cheap_eats"], dist: 0.05 },
+    poppies:          { name: "Poppies Fish & Chips", area: "spitalfields", dishes: ["fish_chips","jellied_eels"],            cuisine: ["british","east_end"],     vibe: ["nostalgic","counter_service","cheap_eats"],              dist: 0.3 },
+    ottolenghi:       { name: "Ottolenghi",           area: "spitalfields", dishes: ["aubergine","challah","babka"],          cuisine: ["middle_eastern","jewish"],vibe: ["bright","brunch","queue"],                               dist: 0.4 },
+    black_axe:        { name: "Black Axe Mangal",     area: "highbury",     dishes: ["lamb_flatbread","squid_flatbread"],     cuisine: ["turkish_inspired","modern_european"], vibe: ["loud","music","cult_favourite","intense"],   dist: 4.2 },
+    climpsons:        { name: "Climpson & Sons",      area: "broadway_mkt", dishes: ["flat_white","sourdough_toast"],         cuisine: ["cafe","specialty_coffee"], vibe: ["weekend_brunch","outdoor","local_favourite"],            dist: 1.6 },
+    gunpowder:        { name: "Gunpowder",            area: "spitalfields", dishes: ["chettinad_duck","rasam"],               cuisine: ["indian","south_indian"],  vibe: ["bustling","small_plates","atmospheric"],                 dist: 0.3 },
+    kappacasein:      { name: "Kappacasein",          area: "borough_mkt",  dishes: ["raclette","grilled_cheese"],            cuisine: ["british","cheese"],       vibe: ["counter_service","cheap_eats","queue","market"],         dist: 5.8 },
+    monocle:          { name: "Monocle Café",         area: "marylebone",   dishes: ["pastries","matcha"],                    cuisine: ["cafe","japanese_leaning"],vibe: ["bright","quiet","design_y"],                             dist: 6.4 },
+    lyles:            { name: "Lyle's",               area: "shoreditch",   dishes: ["tasting_menu","seasonal"],              cuisine: ["modern_british"],         vibe: ["minimal","seasonal","quiet"],                            dist: 0.6 },
+    pophams:          { name: "Pophams Bakery",       area: "hackney",      dishes: ["pastries","laminated_dough"],           cuisine: ["bakery","modern_european"], vibe: ["weekend_brunch","queue","local_favourite"],            dist: 2.8 }
+  },
+
+  // edge weights — how much each relationship type contributes to the rank
+  weights: {
+    SAME_DISH:        3.0,
+    SAME_CUISINE:     1.5,
+    SAME_VIBE:        1.0,
+    SAME_AREA:        1.2,
+    DISTANCE_PENALTY: 0.15
+  },
+
+  rank(query) {
+    const q = query.toLowerCase().trim();
+
+    // The query gives a hint about which anchor matters most.
+    // In production this is a vector similarity step:
+    //   query embedding × anchor embedding → boost.
+    let boost = { beigel: 1, dishoom: 1, towpath: 1 };
+    if (/\b(bagel|beigel|salt beef|sandwich|bread)\b/.test(q))   boost.beigel  = 3;
+    if (/\b(curry|indian|naan|biryani|daal|spice)\b/.test(q))    boost.dishoom = 3;
+    if (/\b(brunch|coffee|cafe|breakfast|outdoor|canal)\b/.test(q)) boost.towpath = 3;
+
+    const W = GRAPH.weights;
+
+    const candidates = Object.entries(GRAPH.venues).map(([id, v]) => {
+      const breakdown = [];
+      let score = 0;
+
+      // For each anchor, accumulate evidence
+      for (const [aId, anchor] of Object.entries(GRAPH.anchors)) {
+        const b = boost[aId];
+
+        const dishOverlap = anchor.dishes.filter(d => v.dishes.includes(d));
+        const cuisineOverlap = anchor.cuisine.filter(c => v.cuisine.includes(c));
+        const vibeOverlap = anchor.vibe.filter(vb => v.vibe.includes(vb));
+        const sameArea = anchor.area === v.area;
+
+        if (dishOverlap.length) {
+          const s = dishOverlap.length * W.SAME_DISH * b;
+          score += s;
+          breakdown.push({ anchor: aId, kind: "SAME_DISH", item: dishOverlap[0], score: s });
+        }
+        if (cuisineOverlap.length) {
+          const s = cuisineOverlap.length * W.SAME_CUISINE * b;
+          score += s;
+          breakdown.push({ anchor: aId, kind: "SAME_CUISINE", item: cuisineOverlap[0], score: s });
+        }
+        if (vibeOverlap.length) {
+          const s = vibeOverlap.length * W.SAME_VIBE * b;
+          score += s;
+          breakdown.push({ anchor: aId, kind: "SAME_VIBE", item: vibeOverlap[0], score: s });
+        }
+        if (sameArea) {
+          const s = W.SAME_AREA * b;
+          score += s;
+          breakdown.push({ anchor: aId, kind: "SAME_AREA", item: v.area, score: s });
+        }
+      }
+
+      score -= v.dist * W.DISTANCE_PENALTY;
+      breakdown.sort((a, b) => b.score - a.score);
+
+      return { id, venue: v, score: Math.max(0, score), breakdown };
+    })
+    .filter(c => c.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+    return candidates;
+  }
+};
+
+/* ───────────────────────────────────────────────
+   UI WIRING
+   ─────────────────────────────────────────────── */
+
+const bar    = document.getElementById("bar");
+const drop   = document.getElementById("drop");
+const input  = document.getElementById("q");
+const sugBox = document.getElementById("suggestions");
+const trace  = document.getElementById("trace");
+const edgesG = document.getElementById("edge-paths");
+const edgesContainer = document.getElementById("edges");
+const go     = document.getElementById("go");
+
+function clearPins() {
+  document.querySelectorAll(".pin").forEach(p => {
+    p.classList.remove("match", "dim");
+  });
+  edgesG.innerHTML = "";
+  edgesContainer.classList.remove("show");
+}
+
+function pinViewBoxPos(id) {
+  const el = document.querySelector(`.pin[data-id="${id}"]`);
+  if (!el) return null;
+  const left = parseFloat(el.style.left);
+  const top  = parseFloat(el.style.top);
+  return { x: left * 16, y: top * 10 };
+}
+
+function drawEdges(top) {
+  edgesG.innerHTML = "";
+  for (const c of top) {
+    const cPos = pinViewBoxPos(c.id);
+    if (!cPos) continue;
+    const anchors = new Set(c.breakdown.slice(0, 2).map(b => b.anchor));
+    for (const aId of anchors) {
+      const aPos = pinViewBoxPos(aId);
+      if (!aPos) continue;
+      const mx = (aPos.x + cPos.x) / 2;
+      const my = (aPos.y + cPos.y) / 2 - 40;
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", `M ${aPos.x} ${aPos.y} Q ${mx} ${my} ${cPos.x} ${cPos.y}`);
+      edgesG.appendChild(path);
+    }
+  }
+  setTimeout(() => edgesContainer.classList.add("show"), 50);
+}
+
+const pretty = s => s.replace(/_/g, " ");
+
+function render(query) {
+  if (!query.trim()) { close(); return; }
+
+  const candidates = GRAPH.rank(query);
+  const top = candidates.slice(0, 4);
+
+  if (!top.length) {
+    sugBox.innerHTML = `<div style="padding: 28px; text-align: center; opacity: 0.55; font-family: 'Fraunces', serif; font-style: italic;">No graph paths from your anchors to "${query}". Try something broader.</div>`;
+    trace.innerHTML = "";
+    open();
+    return;
+  }
+
+  sugBox.innerHTML = top.map((c, i) => {
+    const top2 = c.breakdown.slice(0, 2);
+    const reasons = top2.map(b => {
+      const anchorName = GRAPH.anchors[b.anchor].name;
+      const edgeLabel = b.kind.replace(/_/g, " ").toLowerCase();
+      return `<span class="anchor">${anchorName}</span> &mdash; <span class="edge">${edgeLabel}: ${pretty(b.item)}</span>`;
+    }).join("<br>");
+
+    return `
+      <div class="sugg ${i===0?'top':''}" data-id="${c.id}">
+        <div class="sugg-rank">0${i+1}</div>
+        <div class="sugg-body">
+          <div class="sugg-name">${c.venue.name} <span class="dist">${c.venue.dist.toFixed(1)} km · ${pretty(c.venue.area)}</span></div>
+          <div class="sugg-why">${reasons}</div>
+        </div>
+        <div class="sugg-score">${c.score.toFixed(2)}</div>
+      </div>
+    `;
+  }).join("");
+
+  // breadcrumb: literal graph traversal of top result's strongest path
+  const topC = top[0];
+  const tb = topC.breakdown[0];
+  const anchorName = GRAPH.anchors[tb.anchor].name;
+  trace.innerHTML = `
+    <b>cypher path:</b>
+    <span class="node">User: Alex</span> →
+    <span class="node love">♥ ${anchorName}</span> →
+    <span class="node">[:${tb.kind}]</span> →
+    <span class="node">${pretty(tb.item)}</span> →
+    <span class="node">${topC.venue.name}</span>
+    &nbsp;<b>(score ${topC.score.toFixed(2)})</b>
+  `;
+
+  // update pins
+  clearPins();
+  const matchIds = new Set(top.map(c => c.id));
+  document.querySelectorAll(".pin").forEach(p => {
+    if (matchIds.has(p.dataset.id)) {
+      p.classList.add("match");
+    } else if (!p.classList.contains("loved")) {
+      p.classList.add("dim");
+    }
+  });
+
+  drawEdges(top);
+  open();
+}
+
+function open() {
+  bar.classList.add("open");
+  drop.classList.add("open");
+}
+function close() {
+  bar.classList.remove("open");
+  drop.classList.remove("open");
+  clearPins();
+}
+
+input.addEventListener("input", e => render(e.target.value));
+input.addEventListener("focus", () => { if (input.value.trim()) render(input.value); });
+go.addEventListener("click", () => render(input.value || "where should I eat?"));
+
+// click a suggestion → focus that pin and its feeding edges
+sugBox.addEventListener("click", e => {
+  const card = e.target.closest(".sugg");
+  if (!card) return;
+  document.querySelectorAll(".pin").forEach(p => {
+    p.classList.remove("match");
+    if (!p.classList.contains("loved")) p.classList.add("dim");
+    if (p.dataset.id === card.dataset.id) {
+      p.classList.remove("dim");
+      p.classList.add("match");
+    }
+  });
+  const candidates = GRAPH.rank(input.value || "");
+  const selected = candidates.find(c => c.id === card.dataset.id);
+  if (selected) drawEdges([selected]);
+});
+
+// demo hotkeys (skip when typing in the input)
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" && !["Escape","1","2","3","4"].includes(e.key)) return;
+  if (e.key === "1") { input.value = "bagels near me";        render(input.value); }
+  if (e.key === "2") { input.value = "weekend brunch";        render(input.value); }
+  if (e.key === "3") { input.value = "curry tonight";         render(input.value); }
+  if (e.key === "4") { input.value = "where should I eat?";   render(input.value); }
+  if (e.key === "Escape") { input.value = ""; close(); input.blur(); }
+});
+
+window.addEventListener("load", () => input.focus());
+</script>
+</body>
+</html>

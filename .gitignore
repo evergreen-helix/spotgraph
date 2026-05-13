@@ -1,0 +1,14 @@
+.DS_Store
+*.log
+
+# frontend
+frontend/node_modules
+frontend/dist
+frontend/.env.local
+frontend/.vite
+
+# backend
+backend/__pycache__
+backend/.venv
+backend/.env
+backend/*.py[cod]
