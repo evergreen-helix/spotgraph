@@ -16,9 +16,12 @@ import re
 from fastapi import APIRouter, HTTPException
 
 from db.neo4j_client import session, settings
-from models.schemas import BreakdownItem, RankRequest, RankedCandidate, Venue
+from models.schemas import BreakdownItem, RankRequest, RankedCandidate, Venue, Weights
 
 router = APIRouter()
+
+
+DEFAULT_WEIGHTS = Weights()
 
 
 # Mirrors frontend/src/lib/rank.ts — keyword → anchor boost.
@@ -28,6 +31,10 @@ ANCHOR_BOOSTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\b(bagel|beigel|salt beef|sandwich|bread)\b", re.I), "beigel"),
     (re.compile(r"\b(curry|indian|naan|biryani|daal|spice)\b", re.I), "dishoom"),
     (re.compile(r"\b(brunch|coffee|cafe|breakfast|outdoor|canal)\b", re.I), "towpath"),
+    (re.compile(r"\b(full english|greasy spoon|caff|spaghetti)\b", re.I), "e_pellicci"),
+    (re.compile(r"\b(pakistani|kebab|karahi|lamb chops|seekh)\b", re.I), "lahore_kebab"),
+    (re.compile(r"\b(bone marrow|offal|welsh rarebit|roast pork|roast)\b", re.I), "st_john"),
+    (re.compile(r"\b(flat white|shakshuka|all day brunch|all day)\b", re.I), "caravan_exmouth"),
 ]
 
 
@@ -109,11 +116,11 @@ def post_rank(req: RankRequest) -> list[RankedCandidate]:
                 RANK_QUERY,
                 user_id=s.user_id,
                 boosts=boosts,
-                w_dish=3.0,
-                w_cuisine=1.5,
-                w_vibe=1.0,
-                w_area=1.2,
-                w_distance_penalty=0.15,
+                w_dish=DEFAULT_WEIGHTS.SAME_DISH,
+                w_cuisine=DEFAULT_WEIGHTS.SAME_CUISINE,
+                w_vibe=DEFAULT_WEIGHTS.SAME_VIBE,
+                w_area=DEFAULT_WEIGHTS.SAME_AREA,
+                w_distance_penalty=DEFAULT_WEIGHTS.DISTANCE_PENALTY,
             ).data()
         results: list[RankedCandidate] = []
         for r in records:
