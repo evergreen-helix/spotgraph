@@ -1,9 +1,9 @@
 import { Popup } from "react-map-gl/mapbox";
-import type { Anchor, Graph, RankedCandidate, Venue, VenueId } from "../types";
+import type { Anchor, RankedCandidate, Venue, VenueId } from "../types";
+import { useGraph } from "../contexts/GraphContext";
 import { pretty } from "../lib/rank";
 
 interface Props {
-  graph: Graph;
   venueId: VenueId | null;
   results: RankedCandidate[];
   onClose: () => void;
@@ -25,7 +25,9 @@ function Tags({ label, items }: { label: string; items: string[] }) {
   );
 }
 
-export default function VenuePopup({ graph, venueId, results, onClose }: Props) {
+export default function VenuePopup({ venueId, results, onClose }: Props) {
+  const graph = useGraph();
+
   if (!venueId) return null;
   const anchor = graph.anchors[venueId] as Anchor | undefined;
   const candidate = anchor ? undefined : (graph.venues[venueId] as Venue | undefined);
@@ -77,7 +79,7 @@ export default function VenuePopup({ graph, venueId, results, onClose }: Props) 
             {ranked.breakdown.slice(0, 3).map((b, i) => (
               <div className="popup-why-row" key={i}>
                 <span className="popup-why-anchor">
-                  ♥ {graph.anchors[b.anchor].name}
+                  ♥ {graph.anchors[b.anchor]?.name ?? b.anchor}
                 </span>
                 <span className="popup-why-edge">
                   {b.kind.replace(/_/g, " ").toLowerCase()}: {pretty(b.item)}

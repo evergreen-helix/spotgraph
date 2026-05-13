@@ -1,12 +1,14 @@
-import type { Graph, VenueId } from "../types";
+import type { VenueId } from "../types";
+import { useGraph } from "../contexts/GraphContext";
 import { pretty } from "../lib/rank";
 
 interface Props {
-  graph: Graph;
   onFocus: (id: VenueId) => void;
 }
 
-export default function ProfileCard({ graph, onFocus }: Props) {
+export default function ProfileCard({ onFocus }: Props) {
+  const graph = useGraph();
+
   const totalSearches = Object.values(graph.anchors).reduce(
     (s, a) => s + a.searchCount,
     0

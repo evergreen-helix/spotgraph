@@ -1,0 +1,9035 @@
+{
+  "user": {
+    "id": "u_alex",
+    "name": "Alex Chen",
+    "center": [
+      -0.0726,
+      51.5225
+    ]
+  },
+  "anchors": {
+    "osm_way_271641402": {
+      "id": "osm_way_271641402",
+      "name": "Beigel Bake",
+      "area": "brick_lane",
+      "loc": [
+        -0.071752,
+        51.524512
+      ],
+      "dishes": [
+        "salt_beef_bagel",
+        "cream_cheese_bagel"
+      ],
+      "cuisine": [
+        "bagel"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "late_night"
+      ],
+      "dist": 0,
+      "searchCount": 15,
+      "saves": 5,
+      "directions": 6
+    },
+    "osm_node_3501612811": {
+      "id": "osm_node_3501612811",
+      "name": "Dishoom",
+      "area": "soho",
+      "loc": [
+        -0.125516,
+        51.536116
+      ],
+      "dishes": [
+        "curry",
+        "naan",
+        "biryani",
+        "daal"
+      ],
+      "cuisine": [
+        "indian"
+      ],
+      "vibe": [
+        "outdoor"
+      ],
+      "dist": 0,
+      "searchCount": 11,
+      "saves": 3,
+      "directions": 4
+    },
+    "osm_way_276336362": {
+      "id": "osm_way_276336362",
+      "name": "Towpath Cafe",
+      "area": "hoxton",
+      "loc": [
+        -0.081094,
+        51.537208
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor"
+      ],
+      "dist": 0,
+      "searchCount": 15,
+      "saves": 7,
+      "directions": 7
+    },
+    "osm_node_1024570955": {
+      "id": "osm_node_1024570955",
+      "name": "E. Pellicci",
+      "area": "bethnal_green",
+      "loc": [
+        -0.063379,
+        51.526496
+      ],
+      "dishes": [
+        "pasta",
+        "pizza",
+        "gnocchi"
+      ],
+      "cuisine": [
+        "italian",
+        "local"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0,
+      "searchCount": 17,
+      "saves": 3,
+      "directions": 4
+    },
+    "osm_way_365883989": {
+      "id": "osm_way_365883989",
+      "name": "Lahore Kebab House",
+      "area": "whitechapel",
+      "loc": [
+        -0.063139,
+        51.514547
+      ],
+      "dishes": [
+        "curry",
+        "naan",
+        "biryani",
+        "daal"
+      ],
+      "cuisine": [
+        "indian"
+      ],
+      "vibe": [],
+      "dist": 0,
+      "searchCount": 13,
+      "saves": 7,
+      "directions": 11
+    },
+    "osm_way_147495190": {
+      "id": "osm_way_147495190",
+      "name": "St Johns Pantry",
+      "area": "smithfield",
+      "loc": [
+        -0.101975,
+        51.521003
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0,
+      "searchCount": 18,
+      "saves": 6,
+      "directions": 3
+    },
+    "osm_node_2300722786": {
+      "id": "osm_node_2300722786",
+      "name": "Caravan",
+      "area": "clerkenwell",
+      "loc": [
+        -0.125305,
+        51.535724
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "outdoor"
+      ],
+      "dist": 0,
+      "searchCount": 14,
+      "saves": 4,
+      "directions": 3
+    }
+  },
+  "venues": {
+    "osm_way_271621021": {
+      "id": "osm_way_271621021",
+      "name": "Exit",
+      "area": "brick_lane",
+      "loc": [
+        -0.071464,
+        51.522509
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.08
+    },
+    "osm_way_271614190": {
+      "id": "osm_way_271614190",
+      "name": "Oat Coffee",
+      "area": "brick_lane",
+      "loc": [
+        -0.07154,
+        51.522052
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.09
+    },
+    "osm_way_271652311": {
+      "id": "osm_way_271652311",
+      "name": "Bell Boi",
+      "area": "brick_lane",
+      "loc": [
+        -0.071696,
+        51.523457
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.12
+    },
+    "osm_way_271647953": {
+      "id": "osm_way_271647953",
+      "name": "Damascus Bite",
+      "area": "brick_lane",
+      "loc": [
+        -0.071573,
+        51.523394
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "syrian"
+      ],
+      "vibe": [
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.12
+    },
+    "osm_node_11262484238": {
+      "id": "osm_node_11262484238",
+      "name": "High Grade Coffee",
+      "area": "brick_lane",
+      "loc": [
+        -0.071908,
+        51.521267
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.14
+    },
+    "osm_node_7543984781": {
+      "id": "osm_node_7543984781",
+      "name": "London Cocktail Club",
+      "area": "brick_lane",
+      "loc": [
+        -0.073194,
+        51.523671
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.14
+    },
+    "osm_way_271645800": {
+      "id": "osm_way_271645800",
+      "name": "Kahaila",
+      "area": "brick_lane",
+      "loc": [
+        -0.071624,
+        51.523824
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.16
+    },
+    "osm_way_271645802": {
+      "id": "osm_way_271645802",
+      "name": "Hookah Lounge",
+      "area": "brick_lane",
+      "loc": [
+        -0.071626,
+        51.523775
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.16
+    },
+    "osm_node_12189841207": {
+      "id": "osm_node_12189841207",
+      "name": "Mr. Sausage",
+      "area": "brick_lane",
+      "loc": [
+        -0.073206,
+        51.520985
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.17
+    },
+    "osm_way_638542125": {
+      "id": "osm_way_638542125",
+      "name": "The Rum Kitchen",
+      "area": "brick_lane",
+      "loc": [
+        -0.073945,
+        51.523743
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.17
+    },
+    "osm_node_12110401801": {
+      "id": "osm_node_12110401801",
+      "name": "Vintage Cafe",
+      "area": "brick_lane",
+      "loc": [
+        -0.070616,
+        51.523588
+      ],
+      "dishes": [
+        "pasta",
+        "pizza",
+        "gnocchi",
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "italian",
+        "sandwich",
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.18
+    },
+    "osm_node_5312104442": {
+      "id": "osm_node_5312104442",
+      "name": "Quaker Street Coffee & Bubble Tea",
+      "area": "brick_lane",
+      "loc": [
+        -0.075136,
+        51.522253
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bubble_tea"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.18
+    },
+    "osm_node_11552223069": {
+      "id": "osm_node_11552223069",
+      "name": "Charista",
+      "area": "brick_lane",
+      "loc": [
+        -0.073836,
+        51.524062
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.19
+    },
+    "osm_way_271641416": {
+      "id": "osm_way_271641416",
+      "name": "Katsute100",
+      "area": "brick_lane",
+      "loc": [
+        -0.071702,
+        51.524181
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries",
+        "sushi",
+        "ramen"
+      ],
+      "cuisine": [
+        "cake",
+        "coffee_shop",
+        "japanese"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "design_y"
+      ],
+      "dist": 0.2
+    },
+    "osm_node_830477754": {
+      "id": "osm_node_830477754",
+      "name": "Joan",
+      "area": "brick_lane",
+      "loc": [
+        -0.074397,
+        51.523903
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "late_night"
+      ],
+      "dist": 0.2
+    },
+    "osm_way_271641413": {
+      "id": "osm_way_271641413",
+      "name": "Monty's Lounge",
+      "area": "brick_lane",
+      "loc": [
+        -0.071702,
+        51.524224
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.2
+    },
+    "osm_way_638542138": {
+      "id": "osm_way_638542138",
+      "name": "Cocktail Trading Co",
+      "area": "brick_lane",
+      "loc": [
+        -0.072479,
+        51.524342
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.2
+    },
+    "osm_node_10036375807": {
+      "id": "osm_node_10036375807",
+      "name": "Crosstown",
+      "area": "brick_lane",
+      "loc": [
+        -0.071681,
+        51.524325
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "donut"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.21
+    },
+    "osm_node_622515303": {
+      "id": "osm_node_622515303",
+      "name": "Corbet Place",
+      "area": "spitalfields",
+      "loc": [
+        -0.07375,
+        51.520691
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.22
+    },
+    "osm_way_271641406": {
+      "id": "osm_way_271641406",
+      "name": "Crosstown Shoreditch - Doughnuts & Coffee",
+      "area": "brick_lane",
+      "loc": [
+        -0.071814,
+        51.52445
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.22
+    },
+    "osm_way_271641407": {
+      "id": "osm_way_271641407",
+      "name": "Beigel Shop",
+      "area": "brick_lane",
+      "loc": [
+        -0.071726,
+        51.524365
+      ],
+      "dishes": [
+        "salt_beef_bagel",
+        "cream_cheese_bagel"
+      ],
+      "cuisine": [
+        "bagel"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.22
+    },
+    "osm_way_271632941": {
+      "id": "osm_way_271632941",
+      "name": "Alcotraz Cocktail Prison Bar",
+      "area": "brick_lane",
+      "loc": [
+        -0.071393,
+        51.524378
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.22
+    },
+    "osm_node_3384334002": {
+      "id": "osm_node_3384334002",
+      "name": "Costa",
+      "area": "spitalfields",
+      "loc": [
+        -0.075449,
+        51.521489
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.23
+    },
+    "osm_node_12262948205": {
+      "id": "osm_node_12262948205",
+      "name": "Pasta La Dolce Vita",
+      "area": "brick_lane",
+      "loc": [
+        -0.072234,
+        51.520416
+      ],
+      "dishes": [
+        "pasta",
+        "pizza",
+        "gnocchi"
+      ],
+      "cuisine": [
+        "italian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.23
+    },
+    "osm_node_13684996801": {
+      "id": "osm_node_13684996801",
+      "name": "Gecko Coffeehouse",
+      "area": "brick_lane",
+      "loc": [
+        -0.072716,
+        51.524551
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.23
+    },
+    "osm_node_12766479271": {
+      "id": "osm_node_12766479271",
+      "name": "Crosstown",
+      "area": "brick_lane",
+      "loc": [
+        -0.075732,
+        51.523231
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "donut"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.23
+    },
+    "osm_way_270438730": {
+      "id": "osm_way_270438730",
+      "name": "Enso Lounge",
+      "area": "brick_lane",
+      "loc": [
+        -0.071713,
+        51.520375
+      ],
+      "dishes": [
+        "pad_thai",
+        "green_curry",
+        "som_tam",
+        "sushi",
+        "sashimi"
+      ],
+      "cuisine": [
+        "thai",
+        "sushi"
+      ],
+      "vibe": [
+        "takeaway",
+        "delivery"
+      ],
+      "dist": 0.24
+    },
+    "osm_node_13101085518": {
+      "id": "osm_node_13101085518",
+      "name": "Nude Coffee Roasters",
+      "area": "brick_lane",
+      "loc": [
+        -0.072776,
+        51.520367
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.24
+    },
+    "osm_node_11959060817": {
+      "id": "osm_node_11959060817",
+      "name": "Allpress Espresso Bar",
+      "area": "brick_lane",
+      "loc": [
+        -0.074244,
+        51.524423
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.24
+    },
+    "osm_way_637312570": {
+      "id": "osm_way_637312570",
+      "name": "Soft Serve Society",
+      "area": "brick_lane",
+      "loc": [
+        -0.075731,
+        51.523481
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.24
+    },
+    "osm_way_744553833": {
+      "id": "osm_way_744553833",
+      "name": "Black Bear Burger",
+      "area": "brick_lane",
+      "loc": [
+        -0.075768,
+        51.523432
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.24
+    },
+    "osm_way_813652258": {
+      "id": "osm_way_813652258",
+      "name": "Rainbo",
+      "area": "brick_lane",
+      "loc": [
+        -0.075767,
+        51.523453
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.24
+    },
+    "osm_way_271641404": {
+      "id": "osm_way_271641404",
+      "name": "Brick Lane Kebab",
+      "area": "brick_lane",
+      "loc": [
+        -0.071764,
+        51.524583
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "kebab"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.24
+    },
+    "osm_node_5973415691": {
+      "id": "osm_node_5973415691",
+      "name": "SAKE COLLECTIVE",
+      "area": "spitalfields",
+      "loc": [
+        -0.075786,
+        51.521693
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.24
+    },
+    "osm_node_11530376172": {
+      "id": "osm_node_11530376172",
+      "name": "Juju's",
+      "area": "spitalfields",
+      "loc": [
+        -0.073607,
+        51.520463
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.24
+    },
+    "osm_node_10138850146": {
+      "id": "osm_node_10138850146",
+      "name": "HOKO Hong Kong Cafe",
+      "area": "brick_lane",
+      "loc": [
+        -0.0715,
+        51.524672
+      ],
+      "dishes": [
+        "dim_sum",
+        "noodles",
+        "char_siu",
+        "matcha",
+        "afternoon_tea"
+      ],
+      "cuisine": [
+        "chinese",
+        "coffee",
+        "tea",
+        "bubble_tea"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.25
+    },
+    "osm_node_3841899553": {
+      "id": "osm_node_3841899553",
+      "name": "My Favourite Sandwich",
+      "area": "spitalfields",
+      "loc": [
+        -0.075296,
+        51.520932
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.25
+    },
+    "osm_way_637312526": {
+      "id": "osm_way_637312526",
+      "name": "Edu",
+      "area": "brick_lane",
+      "loc": [
+        -0.075766,
+        51.523508
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.25
+    },
+    "osm_way_637312527": {
+      "id": "osm_way_637312527",
+      "name": "Salad Mafia",
+      "area": "brick_lane",
+      "loc": [
+        -0.075766,
+        51.523531
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.25
+    },
+    "osm_way_637312563": {
+      "id": "osm_way_637312563",
+      "name": "Acai Berry",
+      "area": "brick_lane",
+      "loc": [
+        -0.075839,
+        51.523482
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.25
+    },
+    "osm_way_637312565": {
+      "id": "osm_way_637312565",
+      "name": "Humbledough",
+      "area": "brick_lane",
+      "loc": [
+        -0.075802,
+        51.523482
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.25
+    },
+    "osm_way_813652259": {
+      "id": "osm_way_813652259",
+      "name": "Cookdaily",
+      "area": "shoreditch",
+      "loc": [
+        -0.075947,
+        51.523454
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.25
+    },
+    "osm_way_637312561": {
+      "id": "osm_way_637312561",
+      "name": "Dumdums Donutterie",
+      "area": "shoreditch",
+      "loc": [
+        -0.075874,
+        51.523483
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "donut"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.25
+    },
+    "osm_node_3469593504": {
+      "id": "osm_node_3469593504",
+      "name": "WatchHouse",
+      "area": "spitalfields",
+      "loc": [
+        -0.075263,
+        51.520903
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.26
+    },
+    "osm_way_373262256": {
+      "id": "osm_way_373262256",
+      "name": "Franz\u00e8 & Evans",
+      "area": "brick_lane",
+      "loc": [
+        -0.072607,
+        51.524836
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.26
+    },
+    "osm_way_157323014": {
+      "id": "osm_way_157323014",
+      "name": "Crown",
+      "area": "spitalfields",
+      "loc": [
+        -0.076286,
+        51.522233
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.26
+    },
+    "osm_way_637312528": {
+      "id": "osm_way_637312528",
+      "name": "The Athenian",
+      "area": "shoreditch",
+      "loc": [
+        -0.075945,
+        51.523533
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.26
+    },
+    "osm_way_637312529": {
+      "id": "osm_way_637312529",
+      "name": "Poptata",
+      "area": "shoreditch",
+      "loc": [
+        -0.075946,
+        51.523509
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.26
+    },
+    "osm_way_637312552": {
+      "id": "osm_way_637312552",
+      "name": "Snog Frozen Yogurt",
+      "area": "shoreditch",
+      "loc": [
+        -0.076018,
+        51.523484
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.26
+    },
+    "osm_node_6429221908": {
+      "id": "osm_node_6429221908",
+      "name": "London Shuffle Club",
+      "area": "shoreditch",
+      "loc": [
+        -0.075471,
+        51.524035
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.26
+    },
+    "osm_node_13226005401": {
+      "id": "osm_node_13226005401",
+      "name": "Dumbo Shoreditch",
+      "area": "brick_lane",
+      "loc": [
+        -0.071949,
+        51.524922
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.27
+    },
+    "osm_way_157322984": {
+      "id": "osm_way_157322984",
+      "name": "King Cookdaily",
+      "area": "spitalfields",
+      "loc": [
+        -0.073947,
+        51.520211
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.27
+    },
+    "osm_way_157323015": {
+      "id": "osm_way_157323015",
+      "name": "Poppie\u2019s Fish and Chips",
+      "area": "spitalfields",
+      "loc": [
+        -0.074024,
+        51.520191
+      ],
+      "dishes": [
+        "fish_chips",
+        "mushy_peas"
+      ],
+      "cuisine": [
+        "fish_and_chips"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.27
+    },
+    "osm_way_373262272": {
+      "id": "osm_way_373262272",
+      "name": "Shoreditch Fish & Chips",
+      "area": "brick_lane",
+      "loc": [
+        -0.072026,
+        51.524905
+      ],
+      "dishes": [
+        "fish_chips",
+        "mushy_peas"
+      ],
+      "cuisine": [
+        "fish_and_chips"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.27
+    },
+    "osm_way_744553828": {
+      "id": "osm_way_744553828",
+      "name": "Salt Shed",
+      "area": "shoreditch",
+      "loc": [
+        -0.076272,
+        51.523438
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.27
+    },
+    "osm_way_271632957": {
+      "id": "osm_way_271632957",
+      "name": "Casa Blue",
+      "area": "brick_lane",
+      "loc": [
+        -0.071488,
+        51.52481
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.27
+    },
+    "osm_way_373272365": {
+      "id": "osm_way_373272365",
+      "name": "Fondue",
+      "area": "shoreditch",
+      "loc": [
+        -0.075189,
+        51.524307
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.27
+    },
+    "osm_way_157323017": {
+      "id": "osm_way_157323017",
+      "name": "The Golden Heart",
+      "area": "spitalfields",
+      "loc": [
+        -0.074224,
+        51.520149
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.28
+    },
+    "osm_node_7554507331": {
+      "id": "osm_node_7554507331",
+      "name": "Dirty Burger",
+      "area": "shoreditch",
+      "loc": [
+        -0.07616,
+        51.523745
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.28
+    },
+    "osm_way_273175578": {
+      "id": "osm_way_273175578",
+      "name": "Pret A Manger",
+      "area": "brick_lane",
+      "loc": [
+        -0.071858,
+        51.524958
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.28
+    },
+    "osm_way_744553827": {
+      "id": "osm_way_744553827",
+      "name": "What the pitta",
+      "area": "shoreditch",
+      "loc": [
+        -0.076272,
+        51.52346
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.28
+    },
+    "osm_way_744553832": {
+      "id": "osm_way_744553832",
+      "name": "Beatbox",
+      "area": "shoreditch",
+      "loc": [
+        -0.076269,
+        51.523524
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.28
+    },
+    "osm_way_637312524": {
+      "id": "osm_way_637312524",
+      "name": "Beatbox",
+      "area": "shoreditch",
+      "loc": [
+        -0.076449,
+        51.523525
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.29
+    },
+    "osm_way_744553829": {
+      "id": "osm_way_744553829",
+      "name": "Eat Chay",
+      "area": "shoreditch",
+      "loc": [
+        -0.076451,
+        51.523462
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.29
+    },
+    "osm_way_744553830": {
+      "id": "osm_way_744553830",
+      "name": "La Nonna",
+      "area": "shoreditch",
+      "loc": [
+        -0.076452,
+        51.523439
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.29
+    },
+    "osm_node_8894450827": {
+      "id": "osm_node_8894450827",
+      "name": "La Despensa",
+      "area": "brick_lane",
+      "loc": [
+        -0.070379,
+        51.52017
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.3
+    },
+    "osm_node_13357808701": {
+      "id": "osm_node_13357808701",
+      "name": "Little Fires",
+      "area": "brick_lane",
+      "loc": [
+        -0.071566,
+        51.525111
+      ],
+      "dishes": [
+        "tacos",
+        "burrito",
+        "quesadilla"
+      ],
+      "cuisine": [
+        "mexican"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.3
+    },
+    "osm_node_244056695": {
+      "id": "osm_node_244056695",
+      "name": "Beans & Beyond",
+      "area": "shoreditch",
+      "loc": [
+        -0.075281,
+        51.524692
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.31
+    },
+    "osm_node_10138850144": {
+      "id": "osm_node_10138850144",
+      "name": "Float Cookies and Coffee",
+      "area": "brick_lane",
+      "loc": [
+        -0.0714,
+        51.525173
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.31
+    },
+    "osm_way_637312530": {
+      "id": "osm_way_637312530",
+      "name": "Coqfighter",
+      "area": "shoreditch",
+      "loc": [
+        -0.076772,
+        51.523541
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.31
+    },
+    "osm_way_744553831": {
+      "id": "osm_way_744553831",
+      "name": "Rudie's Jerk Shack",
+      "area": "shoreditch",
+      "loc": [
+        -0.076775,
+        51.523451
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.31
+    },
+    "osm_way_971925053": {
+      "id": "osm_way_971925053",
+      "name": "Mercy Burger",
+      "area": "shoreditch",
+      "loc": [
+        -0.076773,
+        51.523517
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.31
+    },
+    "osm_way_637312573": {
+      "id": "osm_way_637312573",
+      "name": "Voodoo Ray's",
+      "area": "shoreditch",
+      "loc": [
+        -0.076951,
+        51.523509
+      ],
+      "dishes": [
+        "pizza",
+        "neapolitan_pizza"
+      ],
+      "cuisine": [
+        "pizza"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "outdoor",
+        "design_y"
+      ],
+      "dist": 0.32
+    },
+    "osm_way_268473270": {
+      "id": "osm_way_268473270",
+      "name": "Taikula Chicken",
+      "area": "brick_lane",
+      "loc": [
+        -0.071657,
+        51.519715
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.32
+    },
+    "osm_way_268473904": {
+      "id": "osm_way_268473904",
+      "name": "Supreme",
+      "area": "spitalfields",
+      "loc": [
+        -0.071938,
+        51.519655
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.32
+    },
+    "osm_way_945438537": {
+      "id": "osm_way_945438537",
+      "name": "The Well and Bucket",
+      "area": "brick_lane",
+      "loc": [
+        -0.071021,
+        51.525347
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.33
+    },
+    "osm_way_276035568": {
+      "id": "osm_way_276035568",
+      "name": "Poke House",
+      "area": "spitalfields",
+      "loc": [
+        -0.07475,
+        51.519851
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "poke"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "outdoor"
+      ],
+      "dist": 0.33
+    },
+    "osm_way_276036670": {
+      "id": "osm_way_276036670",
+      "name": "Bleecker St",
+      "area": "spitalfields",
+      "loc": [
+        -0.075053,
+        51.519928
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.33
+    },
+    "osm_way_276036672": {
+      "id": "osm_way_276036672",
+      "name": "Poppie's Fish and Chips",
+      "area": "spitalfields",
+      "loc": [
+        -0.07499,
+        51.519926
+      ],
+      "dishes": [
+        "fish_chips",
+        "mushy_peas"
+      ],
+      "cuisine": [
+        "fish_and_chips"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.33
+    },
+    "osm_way_276036676": {
+      "id": "osm_way_276036676",
+      "name": "Hash Hut",
+      "area": "spitalfields",
+      "loc": [
+        -0.07487,
+        51.519923
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.33
+    },
+    "osm_way_276036668": {
+      "id": "osm_way_276036668",
+      "name": "Indi-go",
+      "area": "spitalfields",
+      "loc": [
+        -0.075112,
+        51.519929
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "oriental"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.33
+    },
+    "osm_way_276036675": {
+      "id": "osm_way_276036675",
+      "name": "Cafe Caribbean",
+      "area": "spitalfields",
+      "loc": [
+        -0.074927,
+        51.519925
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "caribbean"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.33
+    },
+    "osm_node_6195245785": {
+      "id": "osm_node_6195245785",
+      "name": "Doppio",
+      "area": "brick_lane",
+      "loc": [
+        -0.069647,
+        51.520058
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.34
+    },
+    "osm_node_10683478907": {
+      "id": "osm_node_10683478907",
+      "name": "Climpson & Sons Coffee Bar",
+      "area": "spitalfields",
+      "loc": [
+        -0.074933,
+        51.519763
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.34
+    },
+    "osm_node_13004394902": {
+      "id": "osm_node_13004394902",
+      "name": "Doh'hut Spitalfields Market",
+      "area": "spitalfields",
+      "loc": [
+        -0.075654,
+        51.520082
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.34
+    },
+    "osm_node_4792554221": {
+      "id": "osm_node_4792554221",
+      "name": "Lady Dinah's Cat Emporium",
+      "area": "brick_lane",
+      "loc": [
+        -0.070475,
+        51.525278
+      ],
+      "dishes": [
+        "seasonal"
+      ],
+      "cuisine": [
+        "regional"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "design_y"
+      ],
+      "dist": 0.34
+    },
+    "osm_node_5483400321": {
+      "id": "osm_node_5483400321",
+      "name": "Tre Rote",
+      "area": "spitalfields",
+      "loc": [
+        -0.07522,
+        51.519845
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.35
+    },
+    "osm_node_11047996151": {
+      "id": "osm_node_11047996151",
+      "name": "The Duck Truck",
+      "area": "spitalfields",
+      "loc": [
+        -0.0764,
+        51.520348
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.35
+    },
+    "osm_node_13273797065": {
+      "id": "osm_node_13273797065",
+      "name": "Merkamo",
+      "area": "spitalfields",
+      "loc": [
+        -0.074927,
+        51.519694
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.35
+    },
+    "osm_way_276045641": {
+      "id": "osm_way_276045641",
+      "name": "Tiny Mammoth",
+      "area": "spitalfields",
+      "loc": [
+        -0.075676,
+        51.52005
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.35
+    },
+    "osm_way_276100290": {
+      "id": "osm_way_276100290",
+      "name": "The Grocer",
+      "area": "spitalfields",
+      "loc": [
+        -0.076345,
+        51.52018
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.36
+    },
+    "osm_way_373118151": {
+      "id": "osm_way_373118151",
+      "name": "Blank Street Coffee",
+      "area": "shoreditch",
+      "loc": [
+        -0.076797,
+        51.524385
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.36
+    },
+    "osm_node_4959842421": {
+      "id": "osm_node_4959842421",
+      "name": "Holy Shot",
+      "area": "brick_lane",
+      "loc": [
+        -0.070574,
+        51.525495
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.36
+    },
+    "osm_way_157221865": {
+      "id": "osm_way_157221865",
+      "name": "The Edge",
+      "area": "shoreditch",
+      "loc": [
+        -0.077759,
+        51.522364
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "outdoor"
+      ],
+      "dist": 0.36
+    },
+    "osm_node_7239517013": {
+      "id": "osm_node_7239517013",
+      "name": "Coffee Matters",
+      "area": "brick_lane",
+      "loc": [
+        -0.070483,
+        51.525534
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "design_y"
+      ],
+      "dist": 0.37
+    },
+    "osm_node_565207373": {
+      "id": "osm_node_565207373",
+      "name": "Pret A Manger",
+      "area": "shoreditch",
+      "loc": [
+        -0.077441,
+        51.523879
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.37
+    },
+    "osm_way_276058220": {
+      "id": "osm_way_276058220",
+      "name": "The Real Greek",
+      "area": "spitalfields",
+      "loc": [
+        -0.075597,
+        51.519752
+      ],
+      "dishes": [
+        "souvlaki",
+        "moussaka",
+        "halloumi"
+      ],
+      "cuisine": [
+        "greek"
+      ],
+      "vibe": [
+        "outdoor",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.37
+    },
+    "osm_way_414133730": {
+      "id": "osm_way_414133730",
+      "name": "Bagel buzz",
+      "area": "shoreditch",
+      "loc": [
+        -0.077508,
+        51.523729
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.37
+    },
+    "osm_way_268470515": {
+      "id": "osm_way_268470515",
+      "name": "Shawarma",
+      "area": "spitalfields",
+      "loc": [
+        -0.071557,
+        51.51923
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "kebab"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.37
+    },
+    "osm_way_268479464": {
+      "id": "osm_way_268479464",
+      "name": "Chaiiwala",
+      "area": "spitalfields",
+      "loc": [
+        -0.071833,
+        51.519134
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.38
+    },
+    "osm_way_157221878": {
+      "id": "osm_way_157221878",
+      "name": "Corner Savoy",
+      "area": "shoreditch",
+      "loc": [
+        -0.078037,
+        51.522825
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.38
+    },
+    "osm_way_268470514": {
+      "id": "osm_way_268470514",
+      "name": "Lebanese Grill Express",
+      "area": "spitalfields",
+      "loc": [
+        -0.071538,
+        51.51912
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.38
+    },
+    "osm_way_276058221": {
+      "id": "osm_way_276058221",
+      "name": "Kerb Social Club",
+      "area": "spitalfields",
+      "loc": [
+        -0.075605,
+        51.519671
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.38
+    },
+    "osm_way_442585913": {
+      "id": "osm_way_442585913",
+      "name": "Rosebery Tea Hut",
+      "area": "brick_lane",
+      "loc": [
+        -0.067146,
+        51.522181
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.38
+    },
+    "osm_node_12651127001": {
+      "id": "osm_node_12651127001",
+      "name": "Fat Hippo Shoreditch",
+      "area": "shoreditch",
+      "loc": [
+        -0.078225,
+        51.522928
+      ],
+      "dishes": [
+        "burger",
+        "fries",
+        "buffalo_wings"
+      ],
+      "cuisine": [
+        "american",
+        "burger"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.39
+    },
+    "osm_way_157322996": {
+      "id": "osm_way_157322996",
+      "name": "The Crown and Shuttle",
+      "area": "shoreditch",
+      "loc": [
+        -0.078249,
+        51.522503
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.39
+    },
+    "osm_node_10826849767": {
+      "id": "osm_node_10826849767",
+      "name": "Dark Arts Coffee",
+      "area": "shoreditch",
+      "loc": [
+        -0.077815,
+        51.52386
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.39
+    },
+    "osm_node_8143369475": {
+      "id": "osm_node_8143369475",
+      "name": "Christ Church Spitalfields Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.074005,
+        51.519102
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.39
+    },
+    "osm_node_470247699": {
+      "id": "osm_node_470247699",
+      "name": "Rudy's Pizza Napoletana",
+      "area": "spitalfields",
+      "loc": [
+        -0.077332,
+        51.520508
+      ],
+      "dishes": [
+        "pizza",
+        "neapolitan_pizza"
+      ],
+      "cuisine": [
+        "pizza"
+      ],
+      "vibe": [
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.39
+    },
+    "osm_way_1293019902": {
+      "id": "osm_way_1293019902",
+      "name": "Rudy's Pizza Napoletana",
+      "area": "shoreditch",
+      "loc": [
+        -0.077571,
+        51.524222
+      ],
+      "dishes": [
+        "pizza",
+        "neapolitan_pizza"
+      ],
+      "cuisine": [
+        "pizza"
+      ],
+      "vibe": [
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.39
+    },
+    "osm_node_12761894258": {
+      "id": "osm_node_12761894258",
+      "name": "Flying Horse Coffee",
+      "area": "shoreditch",
+      "loc": [
+        -0.077903,
+        51.524001
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.4
+    },
+    "osm_way_205408905": {
+      "id": "osm_way_205408905",
+      "name": "The Light Bar",
+      "area": "shoreditch",
+      "loc": [
+        -0.07838,
+        51.522141
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.4
+    },
+    "osm_way_276042533": {
+      "id": "osm_way_276042533",
+      "name": "Yi Fang",
+      "area": "spitalfields",
+      "loc": [
+        -0.074994,
+        51.51921
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.4
+    },
+    "osm_way_276058204": {
+      "id": "osm_way_276058204",
+      "name": "Crepe Affaire",
+      "area": "spitalfields",
+      "loc": [
+        -0.07558,
+        51.519386
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.4
+    },
+    "osm_way_157221870": {
+      "id": "osm_way_157221870",
+      "name": "Caf\u00e9 Pens Amor",
+      "area": "shoreditch",
+      "loc": [
+        -0.078317,
+        51.522972
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.4
+    },
+    "osm_node_10601474130": {
+      "id": "osm_node_10601474130",
+      "name": "Grind",
+      "area": "spitalfields",
+      "loc": [
+        -0.075496,
+        51.519261
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.41
+    },
+    "osm_way_276058207": {
+      "id": "osm_way_276058207",
+      "name": "Chop'd",
+      "area": "spitalfields",
+      "loc": [
+        -0.075747,
+        51.519392
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.41
+    },
+    "osm_way_276100295": {
+      "id": "osm_way_276100295",
+      "name": "itsu",
+      "area": "spitalfields",
+      "loc": [
+        -0.077311,
+        51.520239
+      ],
+      "dishes": [
+        "noodles",
+        "dumplings"
+      ],
+      "cuisine": [
+        "asian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.41
+    },
+    "osm_node_13809070001": {
+      "id": "osm_node_13809070001",
+      "name": "Noxy Brothers",
+      "area": "spitalfields",
+      "loc": [
+        -0.076273,
+        51.519453
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.42
+    },
+    "osm_way_268479472": {
+      "id": "osm_way_268479472",
+      "name": "Brick Lane Coffee Shop",
+      "area": "spitalfields",
+      "loc": [
+        -0.071717,
+        51.518744
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.42
+    },
+    "osm_node_13809082001": {
+      "id": "osm_node_13809082001",
+      "name": "Fen Noodles",
+      "area": "spitalfields",
+      "loc": [
+        -0.076831,
+        51.519706
+      ],
+      "dishes": [
+        "noodles",
+        "dumplings",
+        "udon"
+      ],
+      "cuisine": [
+        "asian",
+        "noodle"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "outdoor"
+      ],
+      "dist": 0.43
+    },
+    "osm_node_12884888345": {
+      "id": "osm_node_12884888345",
+      "name": "DantaCh\u00e1",
+      "area": "spitalfields",
+      "loc": [
+        -0.071594,
+        51.518641
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.43
+    },
+    "osm_way_268467480": {
+      "id": "osm_way_268467480",
+      "name": "Morley's",
+      "area": "spitalfields",
+      "loc": [
+        -0.071323,
+        51.518683
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.43
+    },
+    "osm_way_268479473": {
+      "id": "osm_way_268479473",
+      "name": "Chez Elles",
+      "area": "spitalfields",
+      "loc": [
+        -0.071701,
+        51.518692
+      ],
+      "dishes": [
+        "steak_frites",
+        "moules",
+        "croque_monsieur"
+      ],
+      "cuisine": [
+        "french"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.43
+    },
+    "osm_node_12776426319": {
+      "id": "osm_node_12776426319",
+      "name": "Oat",
+      "area": "shoreditch",
+      "loc": [
+        -0.077984,
+        51.524643
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.44
+    },
+    "osm_node_13804602698": {
+      "id": "osm_node_13804602698",
+      "name": "Canapa House",
+      "area": "spitalfields",
+      "loc": [
+        -0.072695,
+        51.518503
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.44
+    },
+    "osm_node_12826360201": {
+      "id": "osm_node_12826360201",
+      "name": "Kill the Cat",
+      "area": "spitalfields",
+      "loc": [
+        -0.076516,
+        51.519391
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.44
+    },
+    "osm_way_1052068584": {
+      "id": "osm_way_1052068584",
+      "name": "Vagabond",
+      "area": "shoreditch",
+      "loc": [
+        -0.0789,
+        51.521721
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.44
+    },
+    "osm_node_13804666354": {
+      "id": "osm_node_13804666354",
+      "name": "Cafe Mission",
+      "area": "spitalfields",
+      "loc": [
+        -0.073668,
+        51.518486
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.45
+    },
+    "osm_node_3206389319": {
+      "id": "osm_node_3206389319",
+      "name": "Attendant",
+      "area": "spitalfields",
+      "loc": [
+        -0.078922,
+        51.52127
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.46
+    },
+    "osm_node_6247140622": {
+      "id": "osm_node_6247140622",
+      "name": "Black Sheep Coffee",
+      "area": "shoreditch",
+      "loc": [
+        -0.079189,
+        51.522052
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.46
+    },
+    "osm_way_156887748": {
+      "id": "osm_way_156887748",
+      "name": "Crave",
+      "area": "spitalfields",
+      "loc": [
+        -0.071475,
+        51.518386
+      ],
+      "dishes": [
+        "pizza",
+        "neapolitan_pizza",
+        "gelato",
+        "sorbet"
+      ],
+      "cuisine": [
+        "pizza",
+        "ice_cream"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.46
+    },
+    "osm_way_276100278": {
+      "id": "osm_way_276100278",
+      "name": "% Arabica",
+      "area": "spitalfields",
+      "loc": [
+        -0.077179,
+        51.519435
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.46
+    },
+    "osm_node_3623969784": {
+      "id": "osm_node_3623969784",
+      "name": "Marangoni by La Pietra",
+      "area": "spitalfields",
+      "loc": [
+        -0.072588,
+        51.518312
+      ],
+      "dishes": [
+        "pasta",
+        "pizza",
+        "gnocchi"
+      ],
+      "cuisine": [
+        "italian"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.46
+    },
+    "osm_node_10040595917": {
+      "id": "osm_node_10040595917",
+      "name": "Old Spike",
+      "area": "shoreditch",
+      "loc": [
+        -0.079124,
+        51.523477
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.46
+    },
+    "osm_node_1631413548": {
+      "id": "osm_node_1631413548",
+      "name": "Leila's Cafe",
+      "area": "shoreditch",
+      "loc": [
+        -0.075535,
+        51.526201
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.46
+    },
+    "osm_node_7566420750": {
+      "id": "osm_node_7566420750",
+      "name": "Suba",
+      "area": "spitalfields",
+      "loc": [
+        -0.074203,
+        51.518425
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.47
+    },
+    "osm_way_276066514": {
+      "id": "osm_way_276066514",
+      "name": "Matcha Bar",
+      "area": "spitalfields",
+      "loc": [
+        -0.076845,
+        51.519204
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.47
+    },
+    "osm_node_2049355280": {
+      "id": "osm_node_2049355280",
+      "name": "Fashion Sushi & Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.07397,
+        51.518297
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.48
+    },
+    "osm_node_2632761639": {
+      "id": "osm_node_2632761639",
+      "name": "My Pasta Bar",
+      "area": "spitalfields",
+      "loc": [
+        -0.079194,
+        51.52112
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.48
+    },
+    "osm_node_3093870629": {
+      "id": "osm_node_3093870629",
+      "name": "Nha-Mor",
+      "area": "spitalfields",
+      "loc": [
+        -0.076388,
+        51.518909
+      ],
+      "dishes": [
+        "pad_thai",
+        "green_curry",
+        "som_tam"
+      ],
+      "cuisine": [
+        "thai"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.48
+    },
+    "osm_way_39335874": {
+      "id": "osm_way_39335874",
+      "name": "The English Restaurant",
+      "area": "spitalfields",
+      "loc": [
+        -0.076482,
+        51.518938
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.48
+    },
+    "osm_way_156886348": {
+      "id": "osm_way_156886348",
+      "name": "Babel Grill House",
+      "area": "spitalfields",
+      "loc": [
+        -0.071098,
+        51.518281
+      ],
+      "dishes": [
+        "hummus",
+        "shawarma",
+        "tabbouleh"
+      ],
+      "cuisine": [
+        "lebanese"
+      ],
+      "vibe": [
+        "takeaway",
+        "delivery"
+      ],
+      "dist": 0.48
+    },
+    "osm_way_313549050": {
+      "id": "osm_way_313549050",
+      "name": "Roast & Greens",
+      "area": "spitalfields",
+      "loc": [
+        -0.076442,
+        51.518931
+      ],
+      "dishes": [
+        "salad",
+        "grain_bowl"
+      ],
+      "cuisine": [
+        "salad"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.48
+    },
+    "osm_way_39335870": {
+      "id": "osm_way_39335870",
+      "name": "Nagare Coffee",
+      "area": "spitalfields",
+      "loc": [
+        -0.076943,
+        51.518962
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.49
+    },
+    "osm_node_2632761642": {
+      "id": "osm_node_2632761642",
+      "name": "Tsuru",
+      "area": "spitalfields",
+      "loc": [
+        -0.079313,
+        51.521014
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu"
+      ],
+      "cuisine": [
+        "japanese"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.49
+    },
+    "osm_node_2979737106": {
+      "id": "osm_node_2979737106",
+      "name": "Tank & Paddle",
+      "area": "spitalfields",
+      "loc": [
+        -0.079109,
+        51.520738
+      ],
+      "dishes": [
+        "pizza",
+        "neapolitan_pizza"
+      ],
+      "cuisine": [
+        "pizza"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "design_y"
+      ],
+      "dist": 0.49
+    },
+    "osm_node_12543995833": {
+      "id": "osm_node_12543995833",
+      "name": "Pause",
+      "area": "spitalfields",
+      "loc": [
+        -0.074643,
+        51.51829
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.49
+    },
+    "osm_way_667230136": {
+      "id": "osm_way_667230136",
+      "name": "Beechwood",
+      "area": "shoreditch",
+      "loc": [
+        -0.079636,
+        51.521812
+      ],
+      "dishes": [
+        "burger",
+        "fries",
+        "buffalo_wings"
+      ],
+      "cuisine": [
+        "american"
+      ],
+      "vibe": [
+        "pub",
+        "design_y"
+      ],
+      "dist": 0.49
+    },
+    "osm_way_1421634492": {
+      "id": "osm_way_1421634492",
+      "name": "Pavilion Bar",
+      "area": "shoreditch",
+      "loc": [
+        -0.079716,
+        51.522533
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.49
+    },
+    "osm_node_3639031394": {
+      "id": "osm_node_3639031394",
+      "name": "Coffee Shop",
+      "area": "shoreditch",
+      "loc": [
+        -0.077526,
+        51.525802
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "design_y"
+      ],
+      "dist": 0.5
+    },
+    "osm_node_12543995830": {
+      "id": "osm_node_12543995830",
+      "name": "Eat Saigon",
+      "area": "spitalfields",
+      "loc": [
+        -0.074662,
+        51.51815
+      ],
+      "dishes": [
+        "pho",
+        "banh_mi",
+        "spring_rolls"
+      ],
+      "cuisine": [
+        "vietnamese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.5
+    },
+    "osm_way_162033211": {
+      "id": "osm_way_162033211",
+      "name": "Crisis Skylight Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.073843,
+        51.518038
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.5
+    },
+    "osm_node_663673331": {
+      "id": "osm_node_663673331",
+      "name": "Pilpel",
+      "area": "spitalfields",
+      "loc": [
+        -0.077122,
+        51.518964
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "falafel"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.5
+    },
+    "osm_node_3639031393": {
+      "id": "osm_node_3639031393",
+      "name": "Seed Library",
+      "area": "shoreditch",
+      "loc": [
+        -0.077423,
+        51.525816
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.5
+    },
+    "osm_node_2139928140": {
+      "id": "osm_node_2139928140",
+      "name": "The Munch",
+      "area": "shoreditch",
+      "loc": [
+        -0.07789,
+        51.525722
+      ],
+      "dishes": [
+        "kebab",
+        "meze",
+        "lahmacun"
+      ],
+      "cuisine": [
+        "turkish"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.51
+    },
+    "osm_node_2457229991": {
+      "id": "osm_node_2457229991",
+      "name": "Paper & Cup",
+      "area": "shoreditch",
+      "loc": [
+        -0.07684,
+        51.526215
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.51
+    },
+    "osm_node_2632761641": {
+      "id": "osm_node_2632761641",
+      "name": "Pret A Manger",
+      "area": "spitalfields",
+      "loc": [
+        -0.079462,
+        51.520856
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.51
+    },
+    "osm_node_6997419243": {
+      "id": "osm_node_6997419243",
+      "name": "Hoshi",
+      "area": "spitalfields",
+      "loc": [
+        -0.074648,
+        51.518063
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.51
+    },
+    "osm_way_267565298": {
+      "id": "osm_way_267565298",
+      "name": "La Vista",
+      "area": "spitalfields",
+      "loc": [
+        -0.071235,
+        51.517943
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.51
+    },
+    "osm_way_836947889": {
+      "id": "osm_way_836947889",
+      "name": "Tortilla",
+      "area": "spitalfields",
+      "loc": [
+        -0.077335,
+        51.51894
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "tex_mex"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.51
+    },
+    "osm_node_11939631569": {
+      "id": "osm_node_11939631569",
+      "name": "The Umbrella Workshop",
+      "area": "shoreditch",
+      "loc": [
+        -0.077157,
+        51.526088
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.51
+    },
+    "osm_node_3655366838": {
+      "id": "osm_node_3655366838",
+      "name": "Fuckoffee",
+      "area": "brick_lane",
+      "loc": [
+        -0.067949,
+        51.526149
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "design_y"
+      ],
+      "dist": 0.52
+    },
+    "osm_way_836249094": {
+      "id": "osm_way_836249094",
+      "name": "Costa",
+      "area": "spitalfields",
+      "loc": [
+        -0.078184,
+        51.519343
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.52
+    },
+    "osm_way_355309254": {
+      "id": "osm_way_355309254",
+      "name": "Subway",
+      "area": "spitalfields",
+      "loc": [
+        -0.074234,
+        51.517957
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.52
+    },
+    "osm_node_7204531712": {
+      "id": "osm_node_7204531712",
+      "name": "Beans Love Greens",
+      "area": "shoreditch",
+      "loc": [
+        -0.077311,
+        51.526278
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.53
+    },
+    "osm_node_858431027": {
+      "id": "osm_node_858431027",
+      "name": "Duke of Wellington",
+      "area": "spitalfields",
+      "loc": [
+        -0.07459,
+        51.517868
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.53
+    },
+    "osm_node_3639471792": {
+      "id": "osm_node_3639471792",
+      "name": "The Shoreditch",
+      "area": "shoreditch",
+      "loc": [
+        -0.07803,
+        51.525917
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.53
+    },
+    "osm_way_164534150": {
+      "id": "osm_way_164534150",
+      "name": "The Horse & Groom",
+      "area": "shoreditch",
+      "loc": [
+        -0.080434,
+        51.522861
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "design_y"
+      ],
+      "dist": 0.54
+    },
+    "osm_way_157314589": {
+      "id": "osm_way_157314589",
+      "name": "Rack & Bite",
+      "area": "shoreditch",
+      "loc": [
+        -0.079977,
+        51.524307
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.55
+    },
+    "osm_way_164534104": {
+      "id": "osm_way_164534104",
+      "name": "26 Curtain Road",
+      "area": "shoreditch",
+      "loc": [
+        -0.080511,
+        51.522802
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "outdoor"
+      ],
+      "dist": 0.55
+    },
+    "osm_way_157236295": {
+      "id": "osm_way_157236295",
+      "name": "The Old Blue Last",
+      "area": "shoreditch",
+      "loc": [
+        -0.080075,
+        51.524374
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "late_night"
+      ],
+      "dist": 0.56
+    },
+    "osm_node_9691994217": {
+      "id": "osm_node_9691994217",
+      "name": "Potter & Reid",
+      "area": "spitalfields",
+      "loc": [
+        -0.074562,
+        51.517615
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor"
+      ],
+      "dist": 0.56
+    },
+    "osm_node_648517568": {
+      "id": "osm_node_648517568",
+      "name": "Prufrock Coffee",
+      "area": "shoreditch",
+      "loc": [
+        -0.07814,
+        51.526124
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.56
+    },
+    "osm_node_3811092605": {
+      "id": "osm_node_3811092605",
+      "name": "Trade",
+      "area": "spitalfields",
+      "loc": [
+        -0.073848,
+        51.517502
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.56
+    },
+    "osm_node_4405653400": {
+      "id": "osm_node_4405653400",
+      "name": "White Rabbit Cafe",
+      "area": "shoreditch",
+      "loc": [
+        -0.078985,
+        51.525566
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.56
+    },
+    "osm_way_836947870": {
+      "id": "osm_way_836947870",
+      "name": "Be At One",
+      "area": "spitalfields",
+      "loc": [
+        -0.078285,
+        51.518879
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.56
+    },
+    "osm_node_11584565987": {
+      "id": "osm_node_11584565987",
+      "name": "Christina's Shoreditch",
+      "area": "shoreditch",
+      "loc": [
+        -0.080528,
+        51.523847
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.57
+    },
+    "osm_way_847809312": {
+      "id": "osm_way_847809312",
+      "name": "Donburi & Co",
+      "area": "spitalfields",
+      "loc": [
+        -0.077488,
+        51.51821
+      ],
+      "dishes": [
+        "bibimbap",
+        "kimchi",
+        "korean_bbq",
+        "sushi",
+        "ramen"
+      ],
+      "cuisine": [
+        "korean",
+        "japanese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.58
+    },
+    "osm_node_1988964537": {
+      "id": "osm_node_1988964537",
+      "name": "Pret A Manger",
+      "area": "spitalfields",
+      "loc": [
+        -0.079452,
+        51.519434
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.58
+    },
+    "osm_node_3081640239": {
+      "id": "osm_node_3081640239",
+      "name": "Kastner and Ovens",
+      "area": "spitalfields",
+      "loc": [
+        -0.076338,
+        51.517867
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.58
+    },
+    "osm_node_7640434452": {
+      "id": "osm_node_7640434452",
+      "name": "Wallacespace",
+      "area": "spitalfields",
+      "loc": [
+        -0.078213,
+        51.518605
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.58
+    },
+    "osm_node_12813689394": {
+      "id": "osm_node_12813689394",
+      "name": "T4 Tea For U",
+      "area": "spitalfields",
+      "loc": [
+        -0.078686,
+        51.518884
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bubble_tea"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.58
+    },
+    "osm_way_157314571": {
+      "id": "osm_way_157314571",
+      "name": "The Leaf",
+      "area": "shoreditch",
+      "loc": [
+        -0.080099,
+        51.524784
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bubble_tea"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.58
+    },
+    "osm_node_347542399": {
+      "id": "osm_node_347542399",
+      "name": "Jen Tea",
+      "area": "spitalfields",
+      "loc": [
+        -0.077688,
+        51.518185
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.59
+    },
+    "osm_way_142401024": {
+      "id": "osm_way_142401024",
+      "name": "Vallance Grill & PFC",
+      "area": "whitechapel",
+      "loc": [
+        -0.064139,
+        51.521901
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.59
+    },
+    "osm_node_2592530672": {
+      "id": "osm_node_2592530672",
+      "name": "Darlish Ice Cream",
+      "area": "spitalfields",
+      "loc": [
+        -0.078896,
+        51.518857
+      ],
+      "dishes": [
+        "gelato",
+        "sorbet"
+      ],
+      "cuisine": [
+        "ice_cream"
+      ],
+      "vibe": [
+        "counter_service",
+        "takeaway"
+      ],
+      "dist": 0.59
+    },
+    "osm_node_4738112137": {
+      "id": "osm_node_4738112137",
+      "name": "Wing Kingz",
+      "area": "shoreditch",
+      "loc": [
+        -0.0782,
+        51.526475
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "wings"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.59
+    },
+    "osm_node_470247703": {
+      "id": "osm_node_470247703",
+      "name": "The Salt Point Bar",
+      "area": "spitalfields",
+      "loc": [
+        -0.080051,
+        51.519894
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.59
+    },
+    "osm_node_5732244224": {
+      "id": "osm_node_5732244224",
+      "name": "Ninetyeight Bar & Lounge",
+      "area": "shoreditch",
+      "loc": [
+        -0.080095,
+        51.525003
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.59
+    },
+    "osm_way_636155743": {
+      "id": "osm_way_636155743",
+      "name": "Queen of Hoxton",
+      "area": "shoreditch",
+      "loc": [
+        -0.081134,
+        51.522151
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.59
+    },
+    "osm_node_11807306902": {
+      "id": "osm_node_11807306902",
+      "name": "Knead a Little Love",
+      "area": "brick_lane",
+      "loc": [
+        -0.066496,
+        51.526386
+      ],
+      "dishes": [
+        "pastries",
+        "sourdough",
+        "laminated_dough"
+      ],
+      "cuisine": [
+        "bakery",
+        "coffee"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.6
+    },
+    "osm_node_10251784717": {
+      "id": "osm_node_10251784717",
+      "name": "The Buxton",
+      "area": "spitalfields",
+      "loc": [
+        -0.070273,
+        51.51725
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.6
+    },
+    "osm_way_164470278": {
+      "id": "osm_way_164470278",
+      "name": "Inka Poke co",
+      "area": "shoreditch",
+      "loc": [
+        -0.078184,
+        51.526693
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.6
+    },
+    "osm_node_7553964839": {
+      "id": "osm_node_7553964839",
+      "name": "Uni B",
+      "area": "whitechapel",
+      "loc": [
+        -0.067668,
+        51.518084
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.6
+    },
+    "osm_node_7556028302": {
+      "id": "osm_node_7556028302",
+      "name": "Cafe Bite",
+      "area": "whitechapel",
+      "loc": [
+        -0.065314,
+        51.519594
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.6
+    },
+    "osm_way_157236281": {
+      "id": "osm_way_157236281",
+      "name": "itsu",
+      "area": "shoreditch",
+      "loc": [
+        -0.080731,
+        51.524437
+      ],
+      "dishes": [
+        "noodles",
+        "dumplings"
+      ],
+      "cuisine": [
+        "asian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.6
+    },
+    "osm_way_164759611": {
+      "id": "osm_way_164759611",
+      "name": "Jimmy Jacks",
+      "area": "shoreditch",
+      "loc": [
+        -0.081314,
+        51.522119
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.6
+    },
+    "osm_way_846815126": {
+      "id": "osm_way_846815126",
+      "name": "Phoenix Blend Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.076142,
+        51.517603
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.6
+    },
+    "osm_way_533902320": {
+      "id": "osm_way_533902320",
+      "name": "Mikkeller Bar London",
+      "area": "shoreditch",
+      "loc": [
+        -0.076951,
+        51.527326
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor",
+        "design_y"
+      ],
+      "dist": 0.61
+    },
+    "osm_node_6960428256": {
+      "id": "osm_node_6960428256",
+      "name": "Daily Dose",
+      "area": "shoreditch",
+      "loc": [
+        -0.080854,
+        51.524465
+      ],
+      "dishes": [
+        "curry",
+        "naan",
+        "biryani",
+        "daal"
+      ],
+      "cuisine": [
+        "indian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.61
+    },
+    "osm_node_9559128438": {
+      "id": "osm_node_9559128438",
+      "name": "Pret A Manger",
+      "area": "shoreditch",
+      "loc": [
+        -0.078168,
+        51.526766
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.61
+    },
+    "osm_node_12179890459": {
+      "id": "osm_node_12179890459",
+      "name": "Favoutite Chicken",
+      "area": "brick_lane",
+      "loc": [
+        -0.066405,
+        51.526393
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.61
+    },
+    "osm_way_157236283": {
+      "id": "osm_way_157236283",
+      "name": "Santo Remedio",
+      "area": "shoreditch",
+      "loc": [
+        -0.080889,
+        51.524524
+      ],
+      "dishes": [
+        "tacos",
+        "burrito",
+        "quesadilla"
+      ],
+      "cuisine": [
+        "mexican"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.61
+    },
+    "osm_way_157314570": {
+      "id": "osm_way_157314570",
+      "name": "Island Pok\u00e9",
+      "area": "shoreditch",
+      "loc": [
+        -0.080677,
+        51.524765
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "hawaiian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.61
+    },
+    "osm_way_164243084": {
+      "id": "osm_way_164243084",
+      "name": "Simmons Bars",
+      "area": "shoreditch",
+      "loc": [
+        -0.080112,
+        51.525436
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.61
+    },
+    "osm_way_314760744": {
+      "id": "osm_way_314760744",
+      "name": "Williams Ale & Cider House",
+      "area": "spitalfields",
+      "loc": [
+        -0.078463,
+        51.518368
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "local"
+      ],
+      "vibe": [
+        "pub",
+        "design_y"
+      ],
+      "dist": 0.61
+    },
+    "osm_way_314760755": {
+      "id": "osm_way_314760755",
+      "name": "Simmons",
+      "area": "spitalfields",
+      "loc": [
+        -0.078149,
+        51.518173
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.61
+    },
+    "osm_way_163644475": {
+      "id": "osm_way_163644475",
+      "name": "Kings Stores",
+      "area": "spitalfields",
+      "loc": [
+        -0.077822,
+        51.517999
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "design_y"
+      ],
+      "dist": 0.62
+    },
+    "osm_node_11160718504": {
+      "id": "osm_node_11160718504",
+      "name": "Dauns Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.073851,
+        51.516979
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "scandinavian"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "design_y"
+      ],
+      "dist": 0.62
+    },
+    "osm_node_12179890460": {
+      "id": "osm_node_12179890460",
+      "name": "Kung Pao",
+      "area": "brick_lane",
+      "loc": [
+        -0.066286,
+        51.526408
+      ],
+      "dishes": [
+        "noodles",
+        "dumplings"
+      ],
+      "cuisine": [
+        "asian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.62
+    },
+    "osm_way_161720578": {
+      "id": "osm_way_161720578",
+      "name": "Dhaba Kitchen",
+      "area": "spitalfields",
+      "loc": [
+        -0.073965,
+        51.517002
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.62
+    },
+    "osm_node_4475883290": {
+      "id": "osm_node_4475883290",
+      "name": "The Mayor of Scaredy Cat Town",
+      "area": "spitalfields",
+      "loc": [
+        -0.078682,
+        51.518391
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "design_y"
+      ],
+      "dist": 0.62
+    },
+    "osm_node_9691976317": {
+      "id": "osm_node_9691976317",
+      "name": "Neat",
+      "area": "spitalfields",
+      "loc": [
+        -0.07955,
+        51.518865
+      ],
+      "dishes": [
+        "burger",
+        "fries",
+        "salad",
+        "grain_bowl",
+        "sandwich"
+      ],
+      "cuisine": [
+        "burger",
+        "salad",
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "outdoor"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_837365152": {
+      "id": "osm_way_837365152",
+      "name": "LOH Japandi Kitchen",
+      "area": "spitalfields",
+      "loc": [
+        -0.079279,
+        51.518657
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu"
+      ],
+      "cuisine": [
+        "japanese",
+        "scandinavian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "delivery"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_369842750": {
+      "id": "osm_way_369842750",
+      "name": "Marugame Udon",
+      "area": "spitalfields",
+      "loc": [
+        -0.078233,
+        51.517989
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu"
+      ],
+      "cuisine": [
+        "japanese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.63
+    },
+    "osm_node_2639079549": {
+      "id": "osm_node_2639079549",
+      "name": "Pizza Union",
+      "area": "spitalfields",
+      "loc": [
+        -0.077382,
+        51.517717
+      ],
+      "dishes": [
+        "pizza",
+        "neapolitan_pizza"
+      ],
+      "cuisine": [
+        "pizza"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "outdoor"
+      ],
+      "dist": 0.63
+    },
+    "osm_node_906172959": {
+      "id": "osm_node_906172959",
+      "name": "Pod",
+      "area": "spitalfields",
+      "loc": [
+        -0.080352,
+        51.519537
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.63
+    },
+    "osm_node_7141974123": {
+      "id": "osm_node_7141974123",
+      "name": "Rise & Bloom",
+      "area": "shoreditch",
+      "loc": [
+        -0.076333,
+        51.527692
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.63
+    },
+    "osm_node_12179890458": {
+      "id": "osm_node_12179890458",
+      "name": "Domino's",
+      "area": "brick_lane",
+      "loc": [
+        -0.06595,
+        51.526446
+      ],
+      "dishes": [
+        "pizza",
+        "neapolitan_pizza"
+      ],
+      "cuisine": [
+        "pizza"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_161716929": {
+      "id": "osm_way_161716929",
+      "name": "Nilly's Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.07538,
+        51.517119
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_164729816": {
+      "id": "osm_way_164729816",
+      "name": "Pret A Manger",
+      "area": "shoreditch",
+      "loc": [
+        -0.081089,
+        51.524568
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_636155747": {
+      "id": "osm_way_636155747",
+      "name": "Salad Junction",
+      "area": "shoreditch",
+      "loc": [
+        -0.081642,
+        51.522186
+      ],
+      "dishes": [
+        "salad",
+        "grain_bowl"
+      ],
+      "cuisine": [
+        "salad"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_1246062595": {
+      "id": "osm_way_1246062595",
+      "name": "Oliver's",
+      "area": "spitalfields",
+      "loc": [
+        -0.073284,
+        51.516867
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.63
+    },
+    "osm_node_10235907403": {
+      "id": "osm_node_10235907403",
+      "name": "Rawlala",
+      "area": "shoreditch",
+      "loc": [
+        -0.077153,
+        51.527428
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "juice"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_837365174": {
+      "id": "osm_way_837365174",
+      "name": "Schnitz Me",
+      "area": "spitalfields",
+      "loc": [
+        -0.078996,
+        51.518475
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "escalopes"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_166688581": {
+      "id": "osm_way_166688581",
+      "name": "Bedroom Bar",
+      "area": "shoreditch",
+      "loc": [
+        -0.079604,
+        51.526167
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.63
+    },
+    "osm_way_164475597": {
+      "id": "osm_way_164475597",
+      "name": "Gyros Lab",
+      "area": "shoreditch",
+      "loc": [
+        -0.077811,
+        51.527306
+      ],
+      "dishes": [
+        "souvlaki",
+        "moussaka",
+        "halloumi"
+      ],
+      "cuisine": [
+        "greek"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_752177862": {
+      "id": "osm_node_752177862",
+      "name": "Strongroom",
+      "area": "shoreditch",
+      "loc": [
+        -0.0799,
+        51.526081
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "outdoor"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_4422754931": {
+      "id": "osm_node_4422754931",
+      "name": "Into Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.077307,
+        51.517548
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_9956702917": {
+      "id": "osm_node_9956702917",
+      "name": "Nkora",
+      "area": "shoreditch",
+      "loc": [
+        -0.076929,
+        51.52759
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_10031756116": {
+      "id": "osm_node_10031756116",
+      "name": "Slim Chickens",
+      "area": "spitalfields",
+      "loc": [
+        -0.079318,
+        51.51857
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_10031773417": {
+      "id": "osm_node_10031773417",
+      "name": "Store Street Espresso",
+      "area": "spitalfields",
+      "loc": [
+        -0.079325,
+        51.518535
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_12570863801": {
+      "id": "osm_node_12570863801",
+      "name": "Lift Coffee Shoreditch",
+      "area": "shoreditch",
+      "loc": [
+        -0.079528,
+        51.526282
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_13390943727": {
+      "id": "osm_node_13390943727",
+      "name": "Plant Shack",
+      "area": "shoreditch",
+      "loc": [
+        -0.081005,
+        51.524995
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.64
+    },
+    "osm_way_157314595": {
+      "id": "osm_way_157314595",
+      "name": "Subway",
+      "area": "shoreditch",
+      "loc": [
+        -0.080974,
+        51.524924
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.64
+    },
+    "osm_way_267306008": {
+      "id": "osm_way_267306008",
+      "name": "Chicos",
+      "area": "spitalfields",
+      "loc": [
+        -0.069977,
+        51.516996
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_1963875541": {
+      "id": "osm_node_1963875541",
+      "name": "The Corner Shop",
+      "area": "shoreditch",
+      "loc": [
+        -0.0782,
+        51.527102
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "outdoor"
+      ],
+      "dist": 0.64
+    },
+    "osm_node_3636961931": {
+      "id": "osm_node_3636961931",
+      "name": "Jamies",
+      "area": "spitalfields",
+      "loc": [
+        -0.079869,
+        51.51897
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.64
+    },
+    "osm_way_165018306": {
+      "id": "osm_way_165018306",
+      "name": "Ballie Ballerson",
+      "area": "shoreditch",
+      "loc": [
+        -0.080572,
+        51.525451
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.64
+    },
+    "osm_way_267306007": {
+      "id": "osm_way_267306007",
+      "name": "Apples and Pears",
+      "area": "spitalfields",
+      "loc": [
+        -0.069952,
+        51.516958
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.64
+    },
+    "osm_way_973123074": {
+      "id": "osm_way_973123074",
+      "name": "The Birdcage",
+      "area": "brick_lane",
+      "loc": [
+        -0.071024,
+        51.528318
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor",
+        "design_y"
+      ],
+      "dist": 0.65
+    },
+    "osm_way_163644450": {
+      "id": "osm_way_163644450",
+      "name": "Kung Food",
+      "area": "spitalfields",
+      "loc": [
+        -0.079127,
+        51.518222
+      ],
+      "dishes": [
+        "dim_sum",
+        "noodles",
+        "char_siu"
+      ],
+      "cuisine": [
+        "chinese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.65
+    },
+    "osm_node_3636959724": {
+      "id": "osm_node_3636959724",
+      "name": "itsu",
+      "area": "spitalfields",
+      "loc": [
+        -0.079946,
+        51.518782
+      ],
+      "dishes": [
+        "noodles",
+        "dumplings"
+      ],
+      "cuisine": [
+        "asian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.65
+    },
+    "osm_way_164245932": {
+      "id": "osm_way_164245932",
+      "name": "Franco's Take Away",
+      "area": "shoreditch",
+      "loc": [
+        -0.079782,
+        51.526291
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.65
+    },
+    "osm_way_164687436": {
+      "id": "osm_way_164687436",
+      "name": "The Bike Shed",
+      "area": "shoreditch",
+      "loc": [
+        -0.078667,
+        51.526936
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.65
+    },
+    "osm_node_5415379722": {
+      "id": "osm_node_5415379722",
+      "name": "Merchants Tavern",
+      "area": "shoreditch",
+      "loc": [
+        -0.081028,
+        51.525091
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.65
+    },
+    "osm_way_267306006": {
+      "id": "osm_way_267306006",
+      "name": "Sports Bar",
+      "area": "spitalfields",
+      "loc": [
+        -0.069929,
+        51.516919
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.65
+    },
+    "osm_way_835484036": {
+      "id": "osm_way_835484036",
+      "name": "Corney & Barrow",
+      "area": "city",
+      "loc": [
+        -0.080724,
+        51.519562
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.65
+    },
+    "osm_node_10075195204": {
+      "id": "osm_node_10075195204",
+      "name": "Black Sheep Coffee",
+      "area": "spitalfields",
+      "loc": [
+        -0.079864,
+        51.518594
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_163644470": {
+      "id": "osm_way_163644470",
+      "name": "Woodin's Shades",
+      "area": "spitalfields",
+      "loc": [
+        -0.079307,
+        51.518247
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_166688584": {
+      "id": "osm_way_166688584",
+      "name": "FWD:Coffee",
+      "area": "shoreditch",
+      "loc": [
+        -0.080156,
+        51.526121
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "design_y"
+      ],
+      "dist": 0.66
+    },
+    "osm_node_12569169521": {
+      "id": "osm_node_12569169521",
+      "name": "Artsadmin\u2019s Arts Bar & Caf\u00e9",
+      "area": "spitalfields",
+      "loc": [
+        -0.072202,
+        51.516536
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_161720536": {
+      "id": "osm_way_161720536",
+      "name": "Aqua Deli",
+      "area": "spitalfields",
+      "loc": [
+        -0.076308,
+        51.517013
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_161720585": {
+      "id": "osm_way_161720585",
+      "name": "Fazenda",
+      "area": "spitalfields",
+      "loc": [
+        -0.076284,
+        51.516977
+      ],
+      "dishes": [
+        "pasta",
+        "pizza",
+        "gnocchi"
+      ],
+      "cuisine": [
+        "italian"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_164753260": {
+      "id": "osm_way_164753260",
+      "name": "Devi Dhaba Curry Cafe",
+      "area": "shoreditch",
+      "loc": [
+        -0.082112,
+        51.523308
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.66
+    },
+    "osm_node_11159803106": {
+      "id": "osm_node_11159803106",
+      "name": "De Nadas",
+      "area": "shoreditch",
+      "loc": [
+        -0.079975,
+        51.526264
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "empanada"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_157236301": {
+      "id": "osm_way_157236301",
+      "name": "The Bookclub",
+      "area": "shoreditch",
+      "loc": [
+        -0.081523,
+        51.524556
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_163827695": {
+      "id": "osm_way_163827695",
+      "name": "Callooh Callay",
+      "area": "shoreditch",
+      "loc": [
+        -0.079884,
+        51.526298
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_281942022": {
+      "id": "osm_way_281942022",
+      "name": "Without Papers",
+      "area": "shoreditch",
+      "loc": [
+        -0.077792,
+        51.527445
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.66
+    },
+    "osm_way_672022619": {
+      "id": "osm_way_672022619",
+      "name": "Artsadmin Canteen",
+      "area": "spitalfields",
+      "loc": [
+        -0.071853,
+        51.516472
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries",
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "coffee_shop",
+        "sandwich"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "design_y"
+      ],
+      "dist": 0.67
+    },
+    "osm_way_164475611": {
+      "id": "osm_way_164475611",
+      "name": "The Spread Eagle",
+      "area": "shoreditch",
+      "loc": [
+        -0.078201,
+        51.527479
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.67
+    },
+    "osm_way_164527293": {
+      "id": "osm_way_164527293",
+      "name": "Old Kings Head",
+      "area": "old_street",
+      "loc": [
+        -0.082303,
+        51.523111
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.67
+    },
+    "osm_node_7538108749": {
+      "id": "osm_node_7538108749",
+      "name": "Cake Hole Cafe / Vintage Heaven",
+      "area": "brick_lane",
+      "loc": [
+        -0.070908,
+        51.528413
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.67
+    },
+    "osm_way_163644462": {
+      "id": "osm_way_163644462",
+      "name": "Subway",
+      "area": "spitalfields",
+      "loc": [
+        -0.078576,
+        51.517769
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.67
+    },
+    "osm_way_164475530": {
+      "id": "osm_way_164475530",
+      "name": "Tuk Tuk",
+      "area": "shoreditch",
+      "loc": [
+        -0.077754,
+        51.527568
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "outdoor"
+      ],
+      "dist": 0.67
+    },
+    "osm_node_4620456890": {
+      "id": "osm_node_4620456890",
+      "name": "Discount Suit Company",
+      "area": "spitalfields",
+      "loc": [
+        -0.075448,
+        51.516777
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.67
+    },
+    "osm_way_157021561": {
+      "id": "osm_way_157021561",
+      "name": "The Barley Mow",
+      "area": "shoreditch",
+      "loc": [
+        -0.080531,
+        51.526067
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor",
+        "design_y"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_11782185931": {
+      "id": "osm_node_11782185931",
+      "name": "Urban Baristas",
+      "area": "whitechapel",
+      "loc": [
+        -0.06302,
+        51.523771
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_11782185933": {
+      "id": "osm_node_11782185933",
+      "name": "Little Bear Chinese",
+      "area": "whitechapel",
+      "loc": [
+        -0.062905,
+        51.523776
+      ],
+      "dishes": [
+        "dim_sum",
+        "noodles",
+        "char_siu"
+      ],
+      "cuisine": [
+        "chinese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_12875357632": {
+      "id": "osm_node_12875357632",
+      "name": "Taste of China",
+      "area": "shoreditch",
+      "loc": [
+        -0.075993,
+        51.528236
+      ],
+      "dishes": [
+        "dim_sum",
+        "noodles",
+        "char_siu"
+      ],
+      "cuisine": [
+        "chinese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_5483773106": {
+      "id": "osm_node_5483773106",
+      "name": "Essence Cuisine",
+      "area": "shoreditch",
+      "loc": [
+        -0.08191,
+        51.524592
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_10036284175": {
+      "id": "osm_node_10036284175",
+      "name": "Eggslut",
+      "area": "shoreditch",
+      "loc": [
+        -0.081865,
+        51.524604
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_12875292375": {
+      "id": "osm_node_12875292375",
+      "name": "Zamzam Grill",
+      "area": "shoreditch",
+      "loc": [
+        -0.076034,
+        51.52821
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_12875352307": {
+      "id": "osm_node_12875352307",
+      "name": "Pineapple Express",
+      "area": "shoreditch",
+      "loc": [
+        -0.075927,
+        51.528301
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.68
+    },
+    "osm_way_164523831": {
+      "id": "osm_way_164523831",
+      "name": "First Step",
+      "area": "old_street",
+      "loc": [
+        -0.082358,
+        51.522861
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.68
+    },
+    "osm_way_837365133": {
+      "id": "osm_way_837365133",
+      "name": "Badolina",
+      "area": "spitalfields",
+      "loc": [
+        -0.079372,
+        51.51808
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_12875370127": {
+      "id": "osm_node_12875370127",
+      "name": "Caglar Kebab",
+      "area": "shoreditch",
+      "loc": [
+        -0.075959,
+        51.528267
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "kebab"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_12591246001": {
+      "id": "osm_node_12591246001",
+      "name": "Pocketsquare skyline bar and terrace",
+      "area": "whitechapel",
+      "loc": [
+        -0.068361,
+        51.516949
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.68
+    },
+    "osm_way_164475557": {
+      "id": "osm_way_164475557",
+      "name": "Ringside",
+      "area": "shoreditch",
+      "loc": [
+        -0.077797,
+        51.527754
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.68
+    },
+    "osm_way_165488538": {
+      "id": "osm_way_165488538",
+      "name": "The Blues Kitchen",
+      "area": "shoreditch",
+      "loc": [
+        -0.08008,
+        51.526526
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.68
+    },
+    "osm_way_837365134": {
+      "id": "osm_way_837365134",
+      "name": "London Cocktail Club",
+      "area": "spitalfields",
+      "loc": [
+        -0.079472,
+        51.518097
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.68
+    },
+    "osm_node_5108070422": {
+      "id": "osm_node_5108070422",
+      "name": "Baristas Lounge",
+      "area": "whitechapel",
+      "loc": [
+        -0.067928,
+        51.517056
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor"
+      ],
+      "dist": 0.69
+    },
+    "osm_way_157314582": {
+      "id": "osm_way_157314582",
+      "name": "Kybelle",
+      "area": "shoreditch",
+      "loc": [
+        -0.08159,
+        51.525253
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor"
+      ],
+      "dist": 0.69
+    },
+    "osm_way_264127744": {
+      "id": "osm_way_264127744",
+      "name": "Starbucks",
+      "area": "whitechapel",
+      "loc": [
+        -0.068091,
+        51.516986
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.69
+    },
+    "osm_node_3728278239": {
+      "id": "osm_node_3728278239",
+      "name": "Happy Days",
+      "area": "spitalfields",
+      "loc": [
+        -0.075015,
+        51.516467
+      ],
+      "dishes": [
+        "fish_chips",
+        "mushy_peas"
+      ],
+      "cuisine": [
+        "fish_and_chips"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.69
+    },
+    "osm_node_7069817926": {
+      "id": "osm_node_7069817926",
+      "name": "The Pie Factory",
+      "area": "whitechapel",
+      "loc": [
+        -0.066559,
+        51.517505
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.69
+    },
+    "osm_node_12122304901": {
+      "id": "osm_node_12122304901",
+      "name": "Cafe Di Ross",
+      "area": "shoreditch",
+      "loc": [
+        -0.07734,
+        51.528124
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.7
+    },
+    "osm_way_165511908": {
+      "id": "osm_way_165511908",
+      "name": "Project 44",
+      "area": "shoreditch",
+      "loc": [
+        -0.081034,
+        51.526003
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.7
+    },
+    "osm_way_164475566": {
+      "id": "osm_way_164475566",
+      "name": "Valette",
+      "area": "shoreditch",
+      "loc": [
+        -0.077782,
+        51.527943
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.7
+    },
+    "osm_way_264127757": {
+      "id": "osm_way_264127757",
+      "name": "Grounded",
+      "area": "spitalfields",
+      "loc": [
+        -0.069381,
+        51.516432
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries",
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "coffee_shop",
+        "burger"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.71
+    },
+    "osm_node_5108070431": {
+      "id": "osm_node_5108070431",
+      "name": "HFC",
+      "area": "whitechapel",
+      "loc": [
+        -0.065844,
+        51.517727
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken",
+        "kebab"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.71
+    },
+    "osm_way_164475536": {
+      "id": "osm_way_164475536",
+      "name": "Taco Collective",
+      "area": "shoreditch",
+      "loc": [
+        -0.077775,
+        51.528008
+      ],
+      "dishes": [
+        "tacos",
+        "burrito",
+        "quesadilla"
+      ],
+      "cuisine": [
+        "mexican"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.71
+    },
+    "osm_node_9999352719": {
+      "id": "osm_node_9999352719",
+      "name": "Small Square Cafe",
+      "area": "shoreditch",
+      "loc": [
+        -0.082143,
+        51.524868
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.71
+    },
+    "osm_way_161716917": {
+      "id": "osm_way_161716917",
+      "name": "Caf\u00e9 Nora",
+      "area": "spitalfields",
+      "loc": [
+        -0.076145,
+        51.516494
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.71
+    },
+    "osm_way_837365143": {
+      "id": "osm_way_837365143",
+      "name": "Pret A Manger",
+      "area": "spitalfields",
+      "loc": [
+        -0.079652,
+        51.517853
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.71
+    },
+    "osm_node_9951633784": {
+      "id": "osm_node_9951633784",
+      "name": "Found",
+      "area": "shoreditch",
+      "loc": [
+        -0.082161,
+        51.524813
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "design_y"
+      ],
+      "dist": 0.71
+    },
+    "osm_node_11530645097": {
+      "id": "osm_node_11530645097",
+      "name": "Nest Cellar",
+      "area": "shoreditch",
+      "loc": [
+        -0.079778,
+        51.52711
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "no_frills"
+      ],
+      "dist": 0.71
+    },
+    "osm_node_3154058988": {
+      "id": "osm_node_3154058988",
+      "name": "Home Bar",
+      "area": "shoreditch",
+      "loc": [
+        -0.082157,
+        51.524829
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.71
+    },
+    "osm_way_281941502": {
+      "id": "osm_way_281941502",
+      "name": "Dream Bags Jaguar Shoes",
+      "area": "shoreditch",
+      "loc": [
+        -0.077763,
+        51.52807
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.71
+    },
+    "osm_way_264127759": {
+      "id": "osm_way_264127759",
+      "name": "Efes Restaurant",
+      "area": "spitalfields",
+      "loc": [
+        -0.069663,
+        51.51631
+      ],
+      "dishes": [
+        "kebab",
+        "meze",
+        "lahmacun"
+      ],
+      "cuisine": [
+        "turkish"
+      ],
+      "vibe": [
+        "outdoor",
+        "takeaway",
+        "delivery"
+      ],
+      "dist": 0.72
+    },
+    "osm_node_475381384": {
+      "id": "osm_node_475381384",
+      "name": "Casablanca Cafe / Alauddin Sweets",
+      "area": "whitechapel",
+      "loc": [
+        -0.066591,
+        51.517249
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.72
+    },
+    "osm_node_3735863288": {
+      "id": "osm_node_3735863288",
+      "name": "Five Guys",
+      "area": "city",
+      "loc": [
+        -0.07984,
+        51.517836
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.72
+    },
+    "osm_way_267311988": {
+      "id": "osm_way_267311988",
+      "name": "Smoke Grill",
+      "area": "spitalfields",
+      "loc": [
+        -0.069968,
+        51.516259
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "kebab"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.72
+    },
+    "osm_way_316772033": {
+      "id": "osm_way_316772033",
+      "name": "Lower Eastside Deli",
+      "area": "old_street",
+      "loc": [
+        -0.082893,
+        51.5232
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "new_york"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.72
+    },
+    "osm_way_264131966": {
+      "id": "osm_way_264131966",
+      "name": "Whitechapel Gallery Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.070035,
+        51.5161
+      ],
+      "dishes": [
+        "sandwich",
+        "panini",
+        "salad",
+        "grain_bowl"
+      ],
+      "cuisine": [
+        "sandwich",
+        "salad",
+        "cake"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.73
+    },
+    "osm_node_7538108745": {
+      "id": "osm_node_7538108745",
+      "name": "Lupo\u2019s",
+      "area": "brick_lane",
+      "loc": [
+        -0.070055,
+        51.528857
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.73
+    },
+    "osm_way_165015162": {
+      "id": "osm_way_165015162",
+      "name": "Old St Records",
+      "area": "shoreditch",
+      "loc": [
+        -0.08056,
+        51.526813
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "outdoor"
+      ],
+      "dist": 0.73
+    },
+    "osm_way_163997070": {
+      "id": "osm_way_163997070",
+      "name": "Old Street Records",
+      "area": "shoreditch",
+      "loc": [
+        -0.080732,
+        51.526771
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.73
+    },
+    "osm_way_264131973": {
+      "id": "osm_way_264131973",
+      "name": "Dulce",
+      "area": "spitalfields",
+      "loc": [
+        -0.070553,
+        51.515916
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.74
+    },
+    "osm_way_264131967": {
+      "id": "osm_way_264131967",
+      "name": "Exmouth Coffee Company",
+      "area": "spitalfields",
+      "loc": [
+        -0.070356,
+        51.515983
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.74
+    },
+    "osm_way_264131968": {
+      "id": "osm_way_264131968",
+      "name": "KFC",
+      "area": "spitalfields",
+      "loc": [
+        -0.070425,
+        51.515962
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.74
+    },
+    "osm_node_3973541459": {
+      "id": "osm_node_3973541459",
+      "name": "Souk Mediterranean",
+      "area": "whitechapel",
+      "loc": [
+        -0.063147,
+        51.519392
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.74
+    },
+    "osm_node_3973541461": {
+      "id": "osm_node_3973541461",
+      "name": "Al-Safa Grill",
+      "area": "whitechapel",
+      "loc": [
+        -0.063113,
+        51.519324
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.74
+    },
+    "osm_way_164753252": {
+      "id": "osm_way_164753252",
+      "name": "Clifton's Cafe",
+      "area": "old_street",
+      "loc": [
+        -0.083191,
+        51.523224
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.74
+    },
+    "osm_way_835484051": {
+      "id": "osm_way_835484051",
+      "name": "KFC",
+      "area": "city",
+      "loc": [
+        -0.080001,
+        51.517625
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.74
+    },
+    "osm_node_3014236564": {
+      "id": "osm_node_3014236564",
+      "name": "Anise",
+      "area": "spitalfields",
+      "loc": [
+        -0.078666,
+        51.517029
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.74
+    },
+    "osm_way_164845194": {
+      "id": "osm_way_164845194",
+      "name": "Trafik",
+      "area": "shoreditch",
+      "loc": [
+        -0.080546,
+        51.527039
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.74
+    },
+    "osm_way_204000352": {
+      "id": "osm_way_204000352",
+      "name": "3 Mien",
+      "area": "spitalfields",
+      "loc": [
+        -0.076023,
+        51.516104
+      ],
+      "dishes": [
+        "pho",
+        "banh_mi",
+        "spring_rolls"
+      ],
+      "cuisine": [
+        "vietnamese"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.75
+    },
+    "osm_way_204000356": {
+      "id": "osm_way_204000356",
+      "name": "Urban Baristas",
+      "area": "spitalfields",
+      "loc": [
+        -0.076776,
+        51.516273
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.75
+    },
+    "osm_way_835484052": {
+      "id": "osm_way_835484052",
+      "name": "Polo Bar",
+      "area": "city",
+      "loc": [
+        -0.080104,
+        51.517571
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "late_night"
+      ],
+      "dist": 0.75
+    },
+    "osm_node_4948602209": {
+      "id": "osm_node_4948602209",
+      "name": "Bean about Town",
+      "area": "spitalfields",
+      "loc": [
+        -0.077751,
+        51.516553
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.75
+    },
+    "osm_node_9926481415": {
+      "id": "osm_node_9926481415",
+      "name": "Mehmet Efendi",
+      "area": "spitalfields",
+      "loc": [
+        -0.069504,
+        51.516001
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.75
+    },
+    "osm_node_11782185872": {
+      "id": "osm_node_11782185872",
+      "name": "Ahi Poke",
+      "area": "whitechapel",
+      "loc": [
+        -0.061915,
+        51.523441
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.75
+    },
+    "osm_way_204000348": {
+      "id": "osm_way_204000348",
+      "name": "Hohaki",
+      "area": "spitalfields",
+      "loc": [
+        -0.076126,
+        51.516152
+      ],
+      "dishes": [
+        "pho",
+        "banh_mi",
+        "spring_rolls"
+      ],
+      "cuisine": [
+        "vietnamese"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.75
+    },
+    "osm_way_204000382": {
+      "id": "osm_way_204000382",
+      "name": "Ji The Chicken Shop",
+      "area": "spitalfields",
+      "loc": [
+        -0.076066,
+        51.516129
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.75
+    },
+    "osm_way_264131978": {
+      "id": "osm_way_264131978",
+      "name": "Burger King",
+      "area": "spitalfields",
+      "loc": [
+        -0.070879,
+        51.515833
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "burger"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.75
+    },
+    "osm_way_164845189": {
+      "id": "osm_way_164845189",
+      "name": "Balls",
+      "area": "shoreditch",
+      "loc": [
+        -0.080419,
+        51.527148
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "outdoor"
+      ],
+      "dist": 0.75
+    },
+    "osm_way_164244210": {
+      "id": "osm_way_164244210",
+      "name": "The Reliance",
+      "area": "shoreditch",
+      "loc": [
+        -0.081423,
+        51.526599
+      ],
+      "dishes": [
+        "fish_chips",
+        "sunday_roast",
+        "bangers_mash",
+        "pub_burger"
+      ],
+      "cuisine": [
+        "british",
+        "pub"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor",
+        "design_y"
+      ],
+      "dist": 0.76
+    },
+    "osm_way_204000367": {
+      "id": "osm_way_204000367",
+      "name": "Tifin Box",
+      "area": "spitalfields",
+      "loc": [
+        -0.07706,
+        51.516215
+      ],
+      "dishes": [
+        "curry",
+        "naan",
+        "biryani",
+        "daal"
+      ],
+      "cuisine": [
+        "indian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "outdoor"
+      ],
+      "dist": 0.76
+    },
+    "osm_way_264138943": {
+      "id": "osm_way_264138943",
+      "name": "Jack The Chipper",
+      "area": "spitalfields",
+      "loc": [
+        -0.071253,
+        51.51566
+      ],
+      "dishes": [
+        "fish_chips",
+        "mushy_peas"
+      ],
+      "cuisine": [
+        "breakfast",
+        "fish_and_chips"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.76
+    },
+    "osm_node_10056572728": {
+      "id": "osm_node_10056572728",
+      "name": "Hermanos Colombian Coffee Roasters",
+      "area": "brick_lane",
+      "loc": [
+        -0.069653,
+        51.529105
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.76
+    },
+    "osm_node_13076101501": {
+      "id": "osm_node_13076101501",
+      "name": "London Night Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.075907,
+        51.515944
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "late_night"
+      ],
+      "dist": 0.76
+    },
+    "osm_way_835484048": {
+      "id": "osm_way_835484048",
+      "name": "Wasabi",
+      "area": "city",
+      "loc": [
+        -0.080175,
+        51.51752
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu"
+      ],
+      "cuisine": [
+        "japanese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.76
+    },
+    "osm_node_3068270488": {
+      "id": "osm_node_3068270488",
+      "name": "Pod",
+      "area": "spitalfields",
+      "loc": [
+        -0.078247,
+        51.516616
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.76
+    },
+    "osm_node_9505182950": {
+      "id": "osm_node_9505182950",
+      "name": "Gugsu",
+      "area": "spitalfields",
+      "loc": [
+        -0.069652,
+        51.51594
+      ],
+      "dishes": [
+        "pad_thai",
+        "green_curry",
+        "som_tam"
+      ],
+      "cuisine": [
+        "thai"
+      ],
+      "vibe": [
+        "takeaway",
+        "no_frills"
+      ],
+      "dist": 0.76
+    },
+    "osm_node_13444855222": {
+      "id": "osm_node_13444855222",
+      "name": "Indian Masala",
+      "area": "brick_lane",
+      "loc": [
+        -0.063627,
+        51.526449
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.76
+    },
+    "osm_way_157605249": {
+      "id": "osm_way_157605249",
+      "name": "SUSHINOEN",
+      "area": "whitechapel",
+      "loc": [
+        -0.069126,
+        51.515976
+      ],
+      "dishes": [
+        "sushi",
+        "sashimi"
+      ],
+      "cuisine": [
+        "sushi"
+      ],
+      "vibe": [
+        "takeaway",
+        "delivery"
+      ],
+      "dist": 0.76
+    },
+    "osm_way_164845188": {
+      "id": "osm_way_164845188",
+      "name": "Nikki's",
+      "area": "shoreditch",
+      "loc": [
+        -0.080286,
+        51.527458
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.76
+    },
+    "osm_way_281941500": {
+      "id": "osm_way_281941500",
+      "name": "Rolling Stock",
+      "area": "shoreditch",
+      "loc": [
+        -0.077713,
+        51.528614
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.76
+    },
+    "osm_way_157314574": {
+      "id": "osm_way_157314574",
+      "name": "Attendant",
+      "area": "old_street",
+      "loc": [
+        -0.082478,
+        51.525676
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.77
+    },
+    "osm_way_204000359": {
+      "id": "osm_way_204000359",
+      "name": "Grain Kitchen",
+      "area": "spitalfields",
+      "loc": [
+        -0.077115,
+        51.516172
+      ],
+      "dishes": [
+        "salad",
+        "grain_bowl"
+      ],
+      "cuisine": [
+        "salad"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.77
+    },
+    "osm_way_377488603": {
+      "id": "osm_way_377488603",
+      "name": "Ponti's",
+      "area": "city",
+      "loc": [
+        -0.081152,
+        51.518054
+      ],
+      "dishes": [
+        "pasta",
+        "pizza",
+        "gnocchi"
+      ],
+      "cuisine": [
+        "italian"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.77
+    },
+    "osm_way_835484050": {
+      "id": "osm_way_835484050",
+      "name": "SushiDog",
+      "area": "city",
+      "loc": [
+        -0.080269,
+        51.517411
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu"
+      ],
+      "cuisine": [
+        "japanese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.77
+    },
+    "osm_node_439706352": {
+      "id": "osm_node_439706352",
+      "name": "Makkah Grill",
+      "area": "whitechapel",
+      "loc": [
+        -0.064142,
+        51.517966
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.77
+    },
+    "osm_way_164241240": {
+      "id": "osm_way_164241240",
+      "name": "Butchies",
+      "area": "shoreditch",
+      "loc": [
+        -0.082238,
+        51.526002
+      ],
+      "dishes": [
+        "fried_chicken",
+        "wings"
+      ],
+      "cuisine": [
+        "chicken"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.77
+    },
+    "osm_way_204000364": {
+      "id": "osm_way_204000364",
+      "name": "MB's",
+      "area": "spitalfields",
+      "loc": [
+        -0.076514,
+        51.516036
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.77
+    },
+    "osm_way_204000377": {
+      "id": "osm_way_204000377",
+      "name": "3 Leaf",
+      "area": "spitalfields",
+      "loc": [
+        -0.077154,
+        51.516125
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.77
+    },
+    "osm_way_352997691": {
+      "id": "osm_way_352997691",
+      "name": "Red Dog American Sandwiches",
+      "area": "shoreditch",
+      "loc": [
+        -0.080484,
+        51.527381
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.77
+    },
+    "osm_node_385597414": {
+      "id": "osm_node_385597414",
+      "name": "Troy Bar",
+      "area": "shoreditch",
+      "loc": [
+        -0.08001,
+        51.527671
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.77
+    },
+    "osm_node_4520491034": {
+      "id": "osm_node_4520491034",
+      "name": "Old Bengal Bar",
+      "area": "spitalfields",
+      "loc": [
+        -0.079128,
+        51.516931
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.77
+    },
+    "osm_node_5816593644": {
+      "id": "osm_node_5816593644",
+      "name": "YI\u2022CHA",
+      "area": "spitalfields",
+      "loc": [
+        -0.071849,
+        51.515542
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bubble_tea"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.77
+    },
+    "osm_node_3461553681": {
+      "id": "osm_node_3461553681",
+      "name": "Planet Organic",
+      "area": "spitalfields",
+      "loc": [
+        -0.078687,
+        51.516541
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.78
+    },
+    "osm_node_7837285971": {
+      "id": "osm_node_7837285971",
+      "name": "Al-Kahf",
+      "area": "whitechapel",
+      "loc": [
+        -0.064012,
+        51.517997
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.78
+    },
+    "osm_node_7837285973": {
+      "id": "osm_node_7837285973",
+      "name": "Alhambra Cafe",
+      "area": "whitechapel",
+      "loc": [
+        -0.063777,
+        51.518076
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.78
+    },
+    "osm_node_13418563678": {
+      "id": "osm_node_13418563678",
+      "name": "Nero Express",
+      "area": "city",
+      "loc": [
+        -0.080732,
+        51.517626
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.78
+    },
+    "osm_way_165491345": {
+      "id": "osm_way_165491345",
+      "name": "Shoreditch Artist Cafe",
+      "area": "shoreditch",
+      "loc": [
+        -0.081397,
+        51.526865
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.78
+    },
+    "osm_node_4804700428": {
+      "id": "osm_node_4804700428",
+      "name": "Caf\u00e9 338",
+      "area": "bethnal_green",
+      "loc": [
+        -0.063235,
+        51.526484
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "local"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor"
+      ],
+      "dist": 0.78
+    },
+    "osm_way_164483444": {
+      "id": "osm_way_164483444",
+      "name": "Mixology Events",
+      "area": "shoreditch",
+      "loc": [
+        -0.078249,
+        51.528617
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "outdoor"
+      ],
+      "dist": 0.78
+    },
+    "osm_node_311974960": {
+      "id": "osm_node_311974960",
+      "name": "The 1 Bar",
+      "area": "city",
+      "loc": [
+        -0.083184,
+        51.519968
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.78
+    },
+    "osm_node_12427775501": {
+      "id": "osm_node_12427775501",
+      "name": "The Arcanist's Tavern",
+      "area": "shoreditch",
+      "loc": [
+        -0.075218,
+        51.529344
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.78
+    },
+    "osm_way_843118398": {
+      "id": "osm_way_843118398",
+      "name": "TT Liquor",
+      "area": "shoreditch",
+      "loc": [
+        -0.078083,
+        51.528671
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.78
+    },
+    "osm_node_3335140053": {
+      "id": "osm_node_3335140053",
+      "name": "Wasabi",
+      "area": "city",
+      "loc": [
+        -0.080703,
+        51.517434
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu"
+      ],
+      "cuisine": [
+        "japanese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.79
+    },
+    "osm_node_4118414598": {
+      "id": "osm_node_4118414598",
+      "name": "Costa",
+      "area": "city",
+      "loc": [
+        -0.080873,
+        51.517605
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.79
+    },
+    "osm_node_3765014126": {
+      "id": "osm_node_3765014126",
+      "name": "Caf\u00e9 Z",
+      "area": "old_street",
+      "loc": [
+        -0.083907,
+        51.52351
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.79
+    },
+    "osm_node_7538108747": {
+      "id": "osm_node_7538108747",
+      "name": "Cafe Columbia",
+      "area": "brick_lane",
+      "loc": [
+        -0.069296,
+        51.529322
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.79
+    },
+    "osm_node_7837285974": {
+      "id": "osm_node_7837285974",
+      "name": "Bismillah Hotel",
+      "area": "whitechapel",
+      "loc": [
+        -0.063697,
+        51.518091
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.79
+    },
+    "osm_node_13711005514": {
+      "id": "osm_node_13711005514",
+      "name": "Pret A Manger",
+      "area": "city",
+      "loc": [
+        -0.081246,
+        51.517909
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.79
+    },
+    "osm_node_567015764": {
+      "id": "osm_node_567015764",
+      "name": "West Cornwall Pasty Co.",
+      "area": "city",
+      "loc": [
+        -0.080849,
+        51.517527
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "pasty"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.79
+    },
+    "osm_way_165491340": {
+      "id": "osm_way_165491340",
+      "name": "C\u00e2y Tre",
+      "area": "shoreditch",
+      "loc": [
+        -0.081786,
+        51.526843
+      ],
+      "dishes": [
+        "pho",
+        "banh_mi",
+        "spring_rolls"
+      ],
+      "cuisine": [
+        "vietnamese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.8
+    },
+    "osm_way_377488678": {
+      "id": "osm_way_377488678",
+      "name": "Wasabi",
+      "area": "city",
+      "loc": [
+        -0.081286,
+        51.517778
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu"
+      ],
+      "cuisine": [
+        "japanese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.8
+    },
+    "osm_way_377956242": {
+      "id": "osm_way_377956242",
+      "name": "Starbucks",
+      "area": "city",
+      "loc": [
+        -0.080807,
+        51.517422
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.8
+    },
+    "osm_node_3794329186": {
+      "id": "osm_node_3794329186",
+      "name": "Benito's Hat",
+      "area": "city",
+      "loc": [
+        -0.080884,
+        51.517478
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.8
+    },
+    "osm_node_4688449208": {
+      "id": "osm_node_4688449208",
+      "name": "Vital Ingredient",
+      "area": "city",
+      "loc": [
+        -0.08343,
+        51.519874
+      ],
+      "dishes": [
+        "salad",
+        "grain_bowl"
+      ],
+      "cuisine": [
+        "salad"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.8
+    },
+    "osm_node_6445562551": {
+      "id": "osm_node_6445562551",
+      "name": "Rake's Cafe Bar",
+      "area": "city",
+      "loc": [
+        -0.08078,
+        51.517419
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.8
+    },
+    "osm_node_7463859340": {
+      "id": "osm_node_7463859340",
+      "name": "Good Pizza",
+      "area": "whitechapel",
+      "loc": [
+        -0.06921,
+        51.515602
+      ],
+      "dishes": [
+        "pizza",
+        "neapolitan_pizza"
+      ],
+      "cuisine": [
+        "pizza"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.8
+    },
+    "osm_node_13340440399": {
+      "id": "osm_node_13340440399",
+      "name": "Corner Deli",
+      "area": "brick_lane",
+      "loc": [
+        -0.069379,
+        51.52944
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.8
+    },
+    "osm_way_204000365": {
+      "id": "osm_way_204000365",
+      "name": "Current Cafe",
+      "area": "spitalfields",
+      "loc": [
+        -0.077458,
+        51.515894
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu",
+        "flat_white",
+        "espresso"
+      ],
+      "cuisine": [
+        "japanese",
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_1448311257": {
+      "id": "osm_node_1448311257",
+      "name": "Starbucks",
+      "area": "city",
+      "loc": [
+        -0.083664,
+        51.520019
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway",
+        "design_y"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_1695378709": {
+      "id": "osm_node_1695378709",
+      "name": "Eat Viet",
+      "area": "city",
+      "loc": [
+        -0.080211,
+        51.516932
+      ],
+      "dishes": [
+        "pho",
+        "banh_mi",
+        "spring_rolls"
+      ],
+      "cuisine": [
+        "vietnamese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_10036261935": {
+      "id": "osm_node_10036261935",
+      "name": "Photobook cafe",
+      "area": "old_street",
+      "loc": [
+        -0.083817,
+        51.524563
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "outdoor"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_11065191727": {
+      "id": "osm_node_11065191727",
+      "name": "Alchemy Coffee",
+      "area": "old_street",
+      "loc": [
+        -0.084145,
+        51.523682
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_way_377488673": {
+      "id": "osm_way_377488673",
+      "name": "Mi Casa Burritos",
+      "area": "city",
+      "loc": [
+        -0.081716,
+        51.517867
+      ],
+      "dishes": [
+        "tacos",
+        "burrito",
+        "quesadilla"
+      ],
+      "cuisine": [
+        "mexican"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_334507024": {
+      "id": "osm_node_334507024",
+      "name": "Basement Cafe",
+      "area": "old_street",
+      "loc": [
+        -0.08411,
+        51.523696
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_377502618": {
+      "id": "osm_node_377502618",
+      "name": "Subway",
+      "area": "city",
+      "loc": [
+        -0.079945,
+        51.516833
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_7837285972": {
+      "id": "osm_node_7837285972",
+      "name": "Pandhan Kitchen",
+      "area": "whitechapel",
+      "loc": [
+        -0.06371,
+        51.517784
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_7846451963": {
+      "id": "osm_node_7846451963",
+      "name": "Bel-Air",
+      "area": "old_street",
+      "loc": [
+        -0.084088,
+        51.524049
+      ],
+      "dishes": [
+        "burger",
+        "fries"
+      ],
+      "cuisine": [
+        "fast_food"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_way_163923530": {
+      "id": "osm_way_163923530",
+      "name": "Top Daily Caffe",
+      "area": "old_street",
+      "loc": [
+        -0.084028,
+        51.524103
+      ],
+      "dishes": [
+        "flat_white",
+        "sourdough_toast",
+        "pastries"
+      ],
+      "cuisine": [
+        "cafe"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.81
+    },
+    "osm_way_377488674": {
+      "id": "osm_way_377488674",
+      "name": "Upper Crust",
+      "area": "city",
+      "loc": [
+        -0.081522,
+        51.517828
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_way_633249240": {
+      "id": "osm_way_633249240",
+      "name": "Subway",
+      "area": "whitechapel",
+      "loc": [
+        -0.06306,
+        51.518225
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_way_1183654746": {
+      "id": "osm_way_1183654746",
+      "name": "The Joiner on Worship",
+      "area": "old_street",
+      "loc": [
+        -0.084317,
+        51.522233
+      ],
+      "dishes": [
+        "burger",
+        "fries",
+        "buffalo_wings"
+      ],
+      "cuisine": [
+        "american"
+      ],
+      "vibe": [
+        "pub",
+        "outdoor"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_1039290554": {
+      "id": "osm_node_1039290554",
+      "name": "Dirty Martini",
+      "area": "city",
+      "loc": [
+        -0.080597,
+        51.517108
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "late_night"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_2917627046": {
+      "id": "osm_node_2917627046",
+      "name": "Champagne Bar",
+      "area": "city",
+      "loc": [
+        -0.080802,
+        51.517346
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "design_y"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_2917627047": {
+      "id": "osm_node_2917627047",
+      "name": "Catch Lounge",
+      "area": "city",
+      "loc": [
+        -0.080861,
+        51.517323
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric",
+        "design_y"
+      ],
+      "dist": 0.81
+    },
+    "osm_way_212850185": {
+      "id": "osm_way_212850185",
+      "name": "Silvio's Sandwich bar",
+      "area": "old_street",
+      "loc": [
+        -0.084011,
+        51.524182
+      ],
+      "dishes": [
+        "sandwich",
+        "panini"
+      ],
+      "cuisine": [
+        "sandwich"
+      ],
+      "vibe": [
+        "cafe",
+        "bright"
+      ],
+      "dist": 0.81
+    },
+    "osm_way_377956238": {
+      "id": "osm_way_377956238",
+      "name": "Tortilla",
+      "area": "city",
+      "loc": [
+        -0.08121,
+        51.517505
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "tex_mex"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.81
+    },
+    "osm_node_5717663193": {
+      "id": "osm_node_5717663193",
+      "name": "London Cocktail Club",
+      "area": "old_street",
+      "loc": [
+        -0.084252,
+        51.522166
+      ],
+      "dishes": [
+        "seasonal_menu"
+      ],
+      "cuisine": [
+        "bar"
+      ],
+      "vibe": [
+        "loud",
+        "atmospheric"
+      ],
+      "dist": 0.81
+    },
+    "osm_way_835484061": {
+      "id": "osm_way_835484061",
+      "name": "Greggs",
+      "area": "city",
+      "loc": [
+        -0.080645,
+        51.517027
+      ],
+      "dishes": [
+        "sandwich",
+        "panini",
+        "pastries",
+        "sourdough",
+        "laminated_dough"
+      ],
+      "cuisine": [
+        "sandwich",
+        "bakery"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.82
+    },
+    "osm_way_377488594": {
+      "id": "osm_way_377488594",
+      "name": "AMT Coffee",
+      "area": "city",
+      "loc": [
+        -0.082014,
+        51.51793
+      ],
+      "dishes": [
+        "flat_white",
+        "espresso",
+        "pastries"
+      ],
+      "cuisine": [
+        "coffee_shop"
+      ],
+      "vibe": [
+        "cafe",
+        "bright",
+        "takeaway"
+      ],
+      "dist": 0.82
+    },
+    "osm_way_377488677": {
+      "id": "osm_way_377488677",
+      "name": "Wasabi",
+      "area": "city",
+      "loc": [
+        -0.081777,
+        51.51788
+      ],
+      "dishes": [
+        "sushi",
+        "ramen",
+        "katsu"
+      ],
+      "cuisine": [
+        "japanese"
+      ],
+      "vibe": [
+        "counter_service",
+        "cheap_eats",
+        "takeaway"
+      ],
+      "dist": 0.82
+    }
+  },
+  "weights": {
+    "SAME_DISH": 3.0,
+    "SAME_CUISINE": 1.5,
+    "SAME_VIBE": 1.0,
+    "SAME_AREA": 1.2,
+    "DISTANCE_PENALTY": 0.15
+  }
+}

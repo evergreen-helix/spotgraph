@@ -1,0 +1,293 @@
+/* ───────── PROFILE CARD ───────── */
+.profile {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 10;
+  background: var(--bone);
+  border: 1.5px solid var(--ink);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: var(--shadow-tight);
+  max-width: 300px;
+}
+
+.profile h4 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.55;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.profile .name {
+  font-family: "Fraunces", serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.loved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.loved-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.loved-item:hover {
+  background: rgba(232, 169, 58, 0.12);
+}
+
+.loved-item .heart {
+  color: var(--love);
+  font-size: 11px;
+}
+
+.loved-item .place {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.loved-item .area {
+  color: var(--ink);
+  opacity: 0.55;
+  font-style: italic;
+  font-size: 11px;
+}
+
+.profile .source {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dotted rgba(15, 20, 25, 0.2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.45;
+  line-height: 1.6;
+}
+
+/* ───────── HINT CARD ───────── */
+.hint {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 10;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.85;
+  text-align: right;
+  line-height: 1.7;
+  background: var(--bone);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-tight);
+}
+
+.hint kbd {
+  background: var(--ink);
+  color: var(--bone);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 9px;
+  margin: 0 2px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ───────── VENUE POPUP ───────── */
+.venue-popup .mapboxgl-popup-content {
+  background: var(--bone);
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  padding: 0;
+  box-shadow: var(--shadow);
+  font-family: "Inter Tight", sans-serif;
+  overflow: hidden;
+}
+
+.venue-popup .mapboxgl-popup-close-button {
+  font-size: 20px;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--ink);
+  opacity: 0.5;
+  padding: 4px 10px;
+  transition: opacity 0.15s;
+}
+
+.venue-popup .mapboxgl-popup-close-button:hover {
+  opacity: 1;
+  background: transparent;
+}
+
+.venue-popup .mapboxgl-popup-tip {
+  border-top-color: var(--ink);
+}
+
+.popup {
+  padding: 14px 16px 14px;
+  max-width: 320px;
+}
+
+.popup-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+  padding-right: 22px;
+}
+
+.popup-heart {
+  color: var(--love);
+  font-size: 14px;
+}
+
+.popup-name {
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+.popup-sub {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.55;
+  margin-bottom: 12px;
+}
+
+.popup-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  padding: 8px 0;
+  border-top: 1px dotted rgba(15, 20, 25, 0.2);
+  border-bottom: 1px dotted rgba(15, 20, 25, 0.2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.popup-stats b {
+  color: var(--hot);
+  font-weight: 600;
+}
+
+.popup-why {
+  padding: 8px 0;
+  border-top: 1px dotted rgba(15, 20, 25, 0.2);
+  margin-bottom: 10px;
+}
+
+.popup-why-head {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.55;
+  margin-bottom: 6px;
+}
+
+.popup-why-row {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 2px;
+}
+
+.popup-why-anchor {
+  color: var(--thread);
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.popup-why-edge {
+  color: var(--hot);
+  font-weight: 500;
+}
+
+.popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.popup-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 11.5px;
+}
+
+.popup-row-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.55;
+  flex-shrink: 0;
+  width: 58px;
+  padding-top: 3px;
+}
+
+.popup-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.popup-tag {
+  display: inline-block;
+  background: rgba(139, 111, 62, 0.1);
+  border: 1px solid var(--thread-soft);
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 10.5px;
+  color: var(--ink);
+  font-family: "Inter Tight", sans-serif;
+}
+
+.popup.anchor .popup-tag {
+  background: rgba(232, 169, 58, 0.15);
+  border-color: var(--love);
+}
+
+.popup-foot {
+  padding-top: 8px;
+  border-top: 1px dotted rgba(15, 20, 25, 0.2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.45;
+}

@@ -1,0 +1,50 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 22px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.brand {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  pointer-events: auto;
+  background: var(--bone);
+  padding: 6px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  box-shadow: var(--shadow-tight);
+}
+
+.brand span {
+  color: var(--hot);
+}
+
+.meta {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.85;
+  pointer-events: auto;
+  background: var(--bone);
+  padding: 8px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  box-shadow: var(--shadow-tight);
+}
+
+.meta b {
+  color: var(--hot);
+  font-weight: 600;
+}

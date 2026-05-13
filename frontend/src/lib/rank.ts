@@ -1,37 +1,40 @@
-import type { BreakdownItem, Graph, RankedCandidate } from "../types";
+import type { Anchor, BreakdownItem, Graph, RankedCandidate } from "../types";
 
-/**
- * JS port of the Cypher ranking query.
- *
- * In production this is replaced by a POST /api/rank that runs the
- * single Cypher MATCH described in demo-script.md §SCENE 4.
- * Keeping the shape identical means the swap is one fetch call.
- */
+function computeBoosts(
+  anchors: Record<string, Anchor>,
+  query: string
+): Record<string, number> {
+  const tokens = query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((t) => t.length > 2);
+  const boosts: Record<string, number> = {};
+
+  for (const [id, anchor] of Object.entries(anchors)) {
+    boosts[id] = 1;
+    if (!tokens.length) continue;
+
+    const searchable = [
+      anchor.name.toLowerCase(),
+      ...anchor.dishes.map((d) => d.replace(/_/g, " ")),
+      ...anchor.cuisine.map((c) => c.replace(/_/g, " ")),
+      ...anchor.vibe.map((v) => v.replace(/_/g, " ")),
+      anchor.area.replace(/_/g, " "),
+    ];
+
+    for (const token of tokens) {
+      if (searchable.some((s) => s.includes(token))) {
+        boosts[id] = 3;
+        break;
+      }
+    }
+  }
+
+  return boosts;
+}
+
 export function rank(graph: Graph, query: string): RankedCandidate[] {
-  const q = query.toLowerCase().trim();
-
-  // The query nudges which anchor matters most.
-  // In production this is a vector similarity step:
-  //   query embedding × anchor embedding → boost.
-  const boost: Record<string, number> = {};
-  for (const aId of Object.keys(graph.anchors)) boost[aId] = 1;
-
-  if (/\b(bagel|beigel|salt beef|sandwich|bread)\b/.test(q)) boost.beigel = 3;
-  if (/\b(curry|indian|naan|biryani|daal|spice|tikka|masala)\b/.test(q)) boost.dishoom = 3;
-  if (/\b(brunch|coffee|cafe|breakfast|outdoor|canal|sourdough)\b/.test(q)) {
-    boost.towpath = 3;
-    if (boost.caravan_exmouth !== undefined) boost.caravan_exmouth = 3;
-  }
-  if (/\b(kebab|pakistani|lamb|punjabi|tandoor)\b/.test(q)) {
-    if (boost.lahore_kebab !== undefined) boost.lahore_kebab = 3;
-  }
-  if (/\b(roast|sunday|nose[ -]to[ -]tail|seasonal|modern british)\b/.test(q)) {
-    if (boost.st_john !== undefined) boost.st_john = 3;
-  }
-  if (/\b(caff|full english|fry[ -]?up|italian|cheap)\b/.test(q)) {
-    if (boost.e_pellicci !== undefined) boost.e_pellicci = 3;
-  }
-
+  const boost = computeBoosts(graph.anchors, query);
   const W = graph.weights;
 
   const candidates: RankedCandidate[] = Object.entries(graph.venues)
@@ -43,29 +46,51 @@ export function rank(graph: Graph, query: string): RankedCandidate[] {
         const b = boost[aId] ?? 1;
 
         const dishOverlap = anchor.dishes.filter((d) => v.dishes.includes(d));
-        const cuisineOverlap = anchor.cuisine.filter((c) => v.cuisine.includes(c));
+        const cuisineOverlap = anchor.cuisine.filter((c) =>
+          v.cuisine.includes(c)
+        );
         const vibeOverlap = anchor.vibe.filter((vb) => v.vibe.includes(vb));
         const sameArea = anchor.area === v.area;
 
         if (dishOverlap.length) {
           const s = dishOverlap.length * W.SAME_DISH * b;
           score += s;
-          breakdown.push({ anchor: aId, kind: "SAME_DISH", item: dishOverlap[0], score: s });
+          breakdown.push({
+            anchor: aId,
+            kind: "SAME_DISH",
+            item: dishOverlap[0],
+            score: s,
+          });
         }
         if (cuisineOverlap.length) {
           const s = cuisineOverlap.length * W.SAME_CUISINE * b;
           score += s;
-          breakdown.push({ anchor: aId, kind: "SAME_CUISINE", item: cuisineOverlap[0], score: s });
+          breakdown.push({
+            anchor: aId,
+            kind: "SAME_CUISINE",
+            item: cuisineOverlap[0],
+            score: s,
+          });
         }
         if (vibeOverlap.length) {
           const s = vibeOverlap.length * W.SAME_VIBE * b;
           score += s;
-          breakdown.push({ anchor: aId, kind: "SAME_VIBE", item: vibeOverlap[0], score: s });
+          breakdown.push({
+            anchor: aId,
+            kind: "SAME_VIBE",
+            item: vibeOverlap[0],
+            score: s,
+          });
         }
         if (sameArea) {
           const s = W.SAME_AREA * b;
           score += s;
-          breakdown.push({ anchor: aId, kind: "SAME_AREA", item: v.area, score: s });
+          breakdown.push({
+            anchor: aId,
+            kind: "SAME_AREA",
+            item: v.area,
+            score: s,
+          });
         }
       }
 

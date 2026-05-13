@@ -1,0 +1,131 @@
+.mapwrap {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.mapwrap .mapboxgl-canvas {
+  outline: none;
+}
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  opacity: 0.55;
+}
+
+/* ───────── PINS ───────── */
+.pin {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 3px solid var(--bone);
+  box-shadow: var(--shadow-tight);
+  transition: all 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+  cursor: pointer;
+}
+
+.pin.candidate {
+  background: var(--bone);
+  border: 2.5px solid var(--ink);
+  width: 12px;
+  height: 12px;
+}
+.pin.candidate::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  border-radius: 50%;
+  background: var(--ink);
+  opacity: 0.35;
+  transition: opacity 0.3s;
+}
+.pin.candidate:hover::after {
+  opacity: 0.8;
+}
+
+.pin .label {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--ink);
+  color: var(--bone);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  border-radius: 3px;
+}
+
+.pin:hover .label,
+.pin.match .label,
+.pin.loved .label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.pin.loved {
+  background: var(--love);
+  width: 16px;
+  height: 16px;
+}
+
+.pin.loved::before {
+  content: "\2665";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--love);
+  text-shadow: 0 1px 0 var(--bone);
+}
+
+.pin.match {
+  background: var(--hot);
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 0 8px var(--hot-glow), var(--shadow-tight);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 8px var(--hot-glow), var(--shadow-tight);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(196, 69, 45, 0.05), var(--shadow-tight);
+  }
+}
+
+.pin.dim {
+  opacity: 0.25;
+}
+
+/* ───────── HOOD LABELS ───────── */
+.hood-label {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--thread);
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  text-shadow: 0 1px 0 var(--bone), 0 0 6px var(--bone);
+  user-select: none;
+}
+
+/* ───────── ATTRIBUTION ───────── */
+.mapboxgl-ctrl-attrib {
+  background: rgba(247, 243, 236, 0.6) !important;
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 9px !important;
+}

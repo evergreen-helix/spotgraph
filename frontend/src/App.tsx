@@ -6,6 +6,7 @@ import Suggestions from "./components/Suggestions";
 import ProfileCard from "./components/ProfileCard";
 import HintCard from "./components/HintCard";
 import MiniSearch from "./components/MiniSearch";
+import { GraphProvider } from "./contexts/GraphContext";
 import { useSearch } from "./hooks/useSearch";
 
 const HOTKEYS: Record<string, string> = {
@@ -19,9 +20,13 @@ export default function App() {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const {
     graph,
+    graphError,
     query,
     setQuery,
     results,
+    showMore,
+    hasMore,
+    isLoading,
     isOpen,
     close,
     focusedId,
@@ -35,7 +40,6 @@ export default function App() {
 
   const expand = useCallback(() => {
     setCollapsed(false);
-    // focus after the transition starts so it can scroll into view
     requestAnimationFrame(() => inputRef.current?.focus());
   }, []);
 
@@ -69,6 +73,30 @@ export default function App() {
     return () => window.removeEventListener("keydown", handler);
   }, [close, setQuery, focusedId, setFocusedId, collapsed]);
 
+  if (graphError) {
+    return (
+      <div
+        style={{
+          position: "fixed",
+          inset: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          gap: 8,
+          fontFamily: "JetBrains Mono, monospace",
+          fontSize: 11,
+          letterSpacing: "0.15em",
+          textTransform: "uppercase" as const,
+          opacity: 0.55,
+        }}
+      >
+        <span style={{ color: "#c4452d" }}>failed to load graph</span>
+        <span style={{ fontSize: 9, opacity: 0.7 }}>{graphError}</span>
+      </div>
+    );
+  }
+
   if (!graph) {
     return (
       <div
@@ -81,19 +109,18 @@ export default function App() {
           fontFamily: "JetBrains Mono, monospace",
           fontSize: 11,
           letterSpacing: "0.15em",
-          textTransform: "uppercase",
+          textTransform: "uppercase" as const,
           opacity: 0.55,
         }}
       >
-        loading graph…
+        loading graph...
       </div>
     );
   }
 
   return (
-    <>
+    <GraphProvider value={graph}>
       <MapView
-        graph={graph}
         results={results}
         focusedId={focusedId}
         onPinClick={(id) => setFocusedId(id)}
@@ -132,9 +159,11 @@ export default function App() {
           <div className={`drop ${isOpen ? "open" : ""}`}>
             <div className="drop-inner">
               <Suggestions
-                graph={graph}
                 results={results}
                 query={query}
+                isLoading={isLoading}
+                hasMore={hasMore}
+                onShowMore={showMore}
                 onSelect={(id) => setFocusedId(id)}
               />
             </div>
@@ -144,8 +173,8 @@ export default function App() {
 
       <MiniSearch show={collapsed} query={query} onExpand={expand} />
 
-      <ProfileCard graph={graph} onFocus={(id) => setFocusedId(id)} />
+      <ProfileCard onFocus={(id) => setFocusedId(id)} />
       <HintCard />
-    </>
+    </GraphProvider>
   );
 }

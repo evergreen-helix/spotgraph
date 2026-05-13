@@ -10,24 +10,18 @@ import type { FeatureCollection, LineString } from "geojson";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { HOOD_LABELS } from "../data/graph";
 import type { Graph, RankedCandidate, VenueId } from "../types";
+import { useGraph } from "../contexts/GraphContext";
 import VenuePopup from "./VenuePopup";
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 
 interface Props {
-  graph: Graph | null;
   results: RankedCandidate[];
   focusedId: VenueId | null;
   onPinClick: (id: VenueId) => void;
   onPopupClose: () => void;
 }
 
-/**
- * Build a GeoJSON FeatureCollection of arched lines from each anchor
- * to each candidate. Curves are drawn by sampling a quadratic bezier
- * with a midpoint offset perpendicular to the chord — purely cosmetic,
- * gives the lines that "thread on a map" feel.
- */
 function buildEdgeCollection(
   graph: Graph,
   results: RankedCandidate[]
@@ -80,17 +74,17 @@ function bezierArc(
 }
 
 export default function MapView({
-  graph,
   results,
   focusedId,
   onPinClick,
   onPopupClose,
 }: Props) {
+  const graph = useGraph();
   const mapRef = useRef<MapRef | null>(null);
 
   const matchIds = useMemo(() => new Set(results.map((r) => r.id)), [results]);
   const edges = useMemo(() => {
-    if (!graph || results.length === 0) {
+    if (results.length === 0) {
       return { type: "FeatureCollection" as const, features: [] };
     }
     const filtered = focusedId
@@ -99,9 +93,8 @@ export default function MapView({
     return buildEdgeCollection(graph, filtered);
   }, [graph, results, focusedId]);
 
-  // When focus changes, fly to that pin
   useEffect(() => {
-    if (!focusedId || !graph) return;
+    if (!focusedId) return;
     const v = graph.venues[focusedId] ?? graph.anchors[focusedId];
     if (!v || !mapRef.current) return;
     mapRef.current.flyTo({
@@ -112,9 +105,8 @@ export default function MapView({
     });
   }, [focusedId, graph]);
 
-  // When new results arrive, fit them in view
   useEffect(() => {
-    if (!graph || results.length === 0 || !mapRef.current) return;
+    if (results.length === 0 || !mapRef.current) return;
     const pts: [number, number][] = [];
     for (const a of Object.values(graph.anchors)) pts.push(a.loc);
     for (const r of results) pts.push(graph.venues[r.id].loc);
@@ -129,8 +121,6 @@ export default function MapView({
       { padding: { top: 220, bottom: 220, left: 80, right: 80 }, duration: 900 }
     );
   }, [results, graph]);
-
-  if (!graph) return <div className="mapwrap" />;
 
   return (
     <div className="mapwrap">
@@ -147,7 +137,6 @@ export default function MapView({
       >
         <NavigationControl position="top-right" showCompass={false} />
 
-        {/* Edges: arcs between anchor and candidate pins */}
         <Source id="edges" type="geojson" data={edges}>
           <Layer
             id="edges-line"
@@ -161,7 +150,6 @@ export default function MapView({
           />
         </Source>
 
-        {/* Anchor (loved) markers */}
         {Object.values(graph.anchors).map((a) => {
           const isFocused = focusedId === a.id;
           return (
@@ -182,7 +170,6 @@ export default function MapView({
           );
         })}
 
-        {/* Candidate markers */}
         {Object.values(graph.venues).map((v) => {
           const isMatch = matchIds.has(v.id);
           const isDim = matchIds.size > 0 && !isMatch;
@@ -209,7 +196,6 @@ export default function MapView({
           );
         })}
 
-        {/* Neighborhood labels */}
         {HOOD_LABELS.map((h) => (
           <Marker
             key={h.name}
@@ -221,9 +207,7 @@ export default function MapView({
           </Marker>
         ))}
 
-        {/* Click-to-describe popup */}
         <VenuePopup
-          graph={graph}
           venueId={focusedId}
           results={results}
           onClose={onPopupClose}

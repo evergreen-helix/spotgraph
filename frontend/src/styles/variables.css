@@ -1,0 +1,16 @@
+:root {
+  --ink: #0f1419;
+  --bone: #f7f3ec;
+  --paper: #efe9dc;
+  --road: #d9d2c0;
+  --water: #c8d8d8;
+  --park: #d6dec4;
+  --thread: #8b6f3e;
+  --thread-soft: #c7a96a;
+  --hot: #c4452d;
+  --hot-glow: rgba(196, 69, 45, 0.18);
+  --love: #e8a93a;
+  --shadow: 0 30px 60px -20px rgba(15, 20, 25, 0.25),
+    0 10px 30px -10px rgba(15, 20, 25, 0.15);
+  --shadow-tight: 0 4px 16px -4px rgba(15, 20, 25, 0.18);
+}

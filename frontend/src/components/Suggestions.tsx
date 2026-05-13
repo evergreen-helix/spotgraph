@@ -1,14 +1,47 @@
-import type { Graph, RankedCandidate, VenueId } from "../types";
+import { useState } from "react";
+import type { RankedCandidate, VenueId } from "../types";
+import { useGraph } from "../contexts/GraphContext";
 import { pretty } from "../lib/rank";
 
 interface Props {
-  graph: Graph;
   results: RankedCandidate[];
   query: string;
+  isLoading: boolean;
+  hasMore: boolean;
+  onShowMore: () => void;
   onSelect: (id: VenueId) => void;
 }
 
-export default function Suggestions({ graph, results, query, onSelect }: Props) {
+export default function Suggestions({
+  results,
+  query,
+  isLoading,
+  hasMore,
+  onShowMore,
+  onSelect,
+}: Props) {
+  const graph = useGraph();
+  const [feedback, setFeedback] = useState<Record<string, "up" | "down">>({});
+
+  const toggleFeedback = (id: string, dir: "up" | "down") => {
+    setFeedback((prev) => ({
+      ...prev,
+      [id]: prev[id] === dir ? undefined! : dir,
+    }));
+  };
+
+  if (isLoading) {
+    return (
+      <div className="loading-bar">
+        <div className="loading-dots">
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+    );
+  }
+
   if (!results.length) {
     return (
       <div
@@ -27,7 +60,7 @@ export default function Suggestions({ graph, results, query, onSelect }: Props) 
 
   const topC = results[0];
   const tb = topC.breakdown[0];
-  const anchorName = graph.anchors[tb.anchor].name;
+  const anchorName = graph.anchors[tb.anchor]?.name ?? tb.anchor;
 
   return (
     <>
@@ -39,13 +72,16 @@ export default function Suggestions({ graph, results, query, onSelect }: Props) 
       <div>
         {results.map((c, i) => {
           const top2 = c.breakdown.slice(0, 2);
+          const fb = feedback[c.id];
           return (
             <div
               key={c.id}
               className={`sugg ${i === 0 ? "top" : ""}`}
               onClick={() => onSelect(c.id)}
             >
-              <div className="sugg-rank">0{i + 1}</div>
+              <div className="sugg-rank">
+                {String(i + 1).padStart(2, "0")}
+              </div>
               <div className="sugg-body">
                 <div className="sugg-name">
                   {c.venue.name}{" "}
@@ -56,20 +92,53 @@ export default function Suggestions({ graph, results, query, onSelect }: Props) 
                 <div className="sugg-why">
                   {top2.map((b, idx) => (
                     <div key={idx}>
-                      <span className="anchor">{graph.anchors[b.anchor].name}</span>{" "}
+                      <span className="anchor">
+                        {graph.anchors[b.anchor]?.name ?? b.anchor}
+                      </span>{" "}
                       &mdash;{" "}
                       <span className="edge">
-                        {b.kind.replace(/_/g, " ").toLowerCase()}: {pretty(b.item)}
+                        {b.kind.replace(/_/g, " ").toLowerCase()}:{" "}
+                        {pretty(b.item)}
                       </span>
                     </div>
                   ))}
                 </div>
+              </div>
+              <div className="sugg-actions">
+                <button
+                  className={`sugg-action up ${fb === "up" ? "active" : ""}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFeedback(c.id, "up");
+                  }}
+                  title="Good match"
+                  aria-label="Good match"
+                >
+                  ↑
+                </button>
+                <button
+                  className={`sugg-action down ${fb === "down" ? "active" : ""}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFeedback(c.id, "down");
+                  }}
+                  title="Not relevant"
+                  aria-label="Not relevant"
+                >
+                  ↓
+                </button>
               </div>
               <div className="sugg-score">{c.score.toFixed(2)}</div>
             </div>
           );
         })}
       </div>
+
+      {hasMore && (
+        <div className="show-more">
+          <button onClick={onShowMore}>show more</button>
+        </div>
+      )}
 
       <div className="breadcrumb">
         <b>cypher path:</b>{" "}
