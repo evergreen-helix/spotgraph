@@ -13,14 +13,24 @@ export function rank(graph: Graph, query: string): RankedCandidate[] {
   // The query nudges which anchor matters most.
   // In production this is a vector similarity step:
   //   query embedding × anchor embedding → boost.
-  const boost: Record<string, number> = {
-    beigel: 1,
-    dishoom: 1,
-    towpath: 1,
-  };
+  const boost: Record<string, number> = {};
+  for (const aId of Object.keys(graph.anchors)) boost[aId] = 1;
+
   if (/\b(bagel|beigel|salt beef|sandwich|bread)\b/.test(q)) boost.beigel = 3;
-  if (/\b(curry|indian|naan|biryani|daal|spice)\b/.test(q)) boost.dishoom = 3;
-  if (/\b(brunch|coffee|cafe|breakfast|outdoor|canal)\b/.test(q)) boost.towpath = 3;
+  if (/\b(curry|indian|naan|biryani|daal|spice|tikka|masala)\b/.test(q)) boost.dishoom = 3;
+  if (/\b(brunch|coffee|cafe|breakfast|outdoor|canal|sourdough)\b/.test(q)) {
+    boost.towpath = 3;
+    if (boost.caravan_exmouth !== undefined) boost.caravan_exmouth = 3;
+  }
+  if (/\b(kebab|pakistani|lamb|punjabi|tandoor)\b/.test(q)) {
+    if (boost.lahore_kebab !== undefined) boost.lahore_kebab = 3;
+  }
+  if (/\b(roast|sunday|nose[ -]to[ -]tail|seasonal|modern british)\b/.test(q)) {
+    if (boost.st_john !== undefined) boost.st_john = 3;
+  }
+  if (/\b(caff|full english|fry[ -]?up|italian|cheap)\b/.test(q)) {
+    if (boost.e_pellicci !== undefined) boost.e_pellicci = 3;
+  }
 
   const W = graph.weights;
 

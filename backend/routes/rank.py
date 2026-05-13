@@ -26,8 +26,12 @@ router = APIRouter()
 #   query embedding × anchor embedding → continuous boost vector.
 ANCHOR_BOOSTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\b(bagel|beigel|salt beef|sandwich|bread)\b", re.I), "beigel"),
-    (re.compile(r"\b(curry|indian|naan|biryani|daal|spice)\b", re.I), "dishoom"),
-    (re.compile(r"\b(brunch|coffee|cafe|breakfast|outdoor|canal)\b", re.I), "towpath"),
+    (re.compile(r"\b(curry|indian|naan|biryani|daal|spice|tikka|masala)\b", re.I), "dishoom"),
+    (re.compile(r"\b(brunch|coffee|cafe|breakfast|outdoor|canal|sourdough)\b", re.I), "towpath"),
+    (re.compile(r"\b(brunch|coffee|cafe|breakfast|shakshuka|antipodean)\b", re.I), "caravan_exmouth"),
+    (re.compile(r"\b(kebab|pakistani|lamb|punjabi|tandoor)\b", re.I), "lahore_kebab"),
+    (re.compile(r"\b(roast|sunday|nose[ -]to[ -]tail|seasonal|modern british)\b", re.I), "st_john"),
+    (re.compile(r"\b(caff|full english|fry[ -]?up|italian|cheap)\b", re.I), "e_pellicci"),
 ]
 
 
