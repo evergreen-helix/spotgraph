@@ -33,14 +33,15 @@ WITH u, collect({
 }) AS anchors
 
 // Render a digestible subset: hand-curated venues first (non-'osm_' ids),
-// then OSM by ascending distance. Cap at 200 so the map stays smooth and
-// edge lines remain visible. The rank endpoint still queries the full graph.
+// then OSM by ascending distance. Cap at 600 — denser map for visual
+// richness, traded against a heavier Mapbox marker load. The rank endpoint
+// still queries the full graph.
 MATCH (v:Venue)
 WHERE NOT (u)-[:ANCHORED_TO]->(v)
 WITH u, anchors, v,
      CASE WHEN v.id STARTS WITH 'osm_' THEN 1 ELSE 0 END AS is_osm
 ORDER BY is_osm ASC, v.dist ASC
-LIMIT 200
+LIMIT 600
 
 OPTIONAL MATCH (v)-[:SERVES]->(d:Dish)
 OPTIONAL MATCH (v)-[:HAS_CUISINE]->(c:Cuisine)
