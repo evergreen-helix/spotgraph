@@ -24,6 +24,18 @@ STEP 1 — Start Neo4j
 
 Option A (local, recommended for the demo):
 
+First check whether a previous run already left a container behind:
+
+    docker ps -a --filter name=spotgraph-neo4j --format "{{.Names}} {{.Status}}"
+
+If you see "spotgraph-neo4j Up ...", it's already running — skip to
+Step 2 and reuse it (data is preserved unless you destroy the
+container).  If you see "spotgraph-neo4j Exited ...", remove it first:
+
+    docker rm spotgraph-neo4j
+
+Then start it:
+
     docker run -d --rm --name spotgraph-neo4j \
       -p 7687:7687 -p 7474:7474 \
       -e NEO4J_AUTH=neo4j/testpassword \
